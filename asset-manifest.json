@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.5bd390d4.css",
-    "main.js": "/static/js/main.2c9f0540.js",
+    "main.js": "/static/js/main.e4a78876.js",
     "static/js/453.56bb96ee.chunk.js": "/static/js/453.56bb96ee.chunk.js",
     "static/media/Useless_Butler's_character_competition.png": "/static/media/Useless_Butler's_character_competition.9635efab62f899b7bbe5.png",
     "static/media/Eyes_of_Heaven_Cover.png": "/static/media/Eyes_of_Heaven_Cover.d43488a12ff5a1286faa.png",
@@ -30,11 +30,11 @@
     "static/media/YouTube.png": "/static/media/YouTube.c8f3e8f286c46725b712.png",
     "index.html": "/index.html",
     "main.5bd390d4.css.map": "/static/css/main.5bd390d4.css.map",
-    "main.2c9f0540.js.map": "/static/js/main.2c9f0540.js.map",
+    "main.e4a78876.js.map": "/static/js/main.e4a78876.js.map",
     "453.56bb96ee.chunk.js.map": "/static/js/453.56bb96ee.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5bd390d4.css",
-    "static/js/main.2c9f0540.js"
+    "static/js/main.e4a78876.js"
   ]
 }
