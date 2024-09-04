@@ -9,6 +9,10 @@ import youtubeIcon  from "./assets/images/icons/YouTube.png";
 import './App.css';
 import { useState } from 'react';
 
+function mod(a, b) {
+  return ((a % b) + b) % b;
+}
+
 const news_links = [
   "ASBR_modding_comes_to_Nintendo_Switch",
   "Useless_Maid's_Lisa_Lisa_competition",
@@ -28,25 +32,23 @@ function App() {
   let [news_image, set_news_image] = useState(images[news_image_ref[random_news]]);
   let [news_title, set_news_title] = useState(random_news.replace(/_/g, " "));
 
-  function changeNews(forward) {
-    if (forward) {
-      set_news_index((news_index + 1) % news_links.length);
-    } else {
-      let temp = news_index - 1;
-      if (temp < 0) temp = news_links.length - 1;
-      set_news_index(temp);
-    }
-    reloadNews();
-  }
-
   function reloadNews() {
     random_news = news_links[news_index];
     set_news_link("https://jojomodding.miraheze.org/wiki/News:" + random_news);
     set_news_image(images[news_image_ref[random_news]]);
     set_news_title(random_news.replace(/_/g, " "));
 
-    console.log(news_index);
-  };
+    console.log("News Index: %s", news_index);
+  }
+
+  function changeNews(forward) {
+    if (forward) {
+      set_news_index(mod((news_index + 1), news_links.length));
+    } else {
+      set_news_index(mod((news_index - 1), news_links.length));
+    }
+    reloadNews();
+  }
 
   return (
     <div className="App">
