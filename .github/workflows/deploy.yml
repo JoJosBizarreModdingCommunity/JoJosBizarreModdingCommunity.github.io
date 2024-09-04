@@ -8,6 +8,10 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+        contents: write
+    concurrency:
+        group: ${{ github.workflow }}-${{ github.ref }}
 
     steps:
     - name: Checkout Repository
@@ -24,5 +28,9 @@ jobs:
     - name: Run Predeploy Script
       run: npm run predeploy
 
-    - name: Run Deploy Script
-      run: npm run deploy
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: your-branch  # default: gh-pages
+        publish_dir: ./build
