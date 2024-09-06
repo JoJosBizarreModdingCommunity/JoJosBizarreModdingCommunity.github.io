@@ -17,6 +17,7 @@ import icons        from "./assets/icons.js"
 import thumbnails   from "./assets/thumbnails.js"
 import logo         from './assets/images/Logo.png';
 import arrow        from "./assets/images/Arrow.png";
+import banner       from "./assets/images/Banner.png";
 
 const news_links = [
   "ASBR_modding_comes_to_Nintendo_Switch",
@@ -121,7 +122,7 @@ function MainPage() {
 
         <div id="about-us" className="about-us">
           <h1>About Us</h1>
-          <img src={logo} style={{width: "500px", display: "block", margin: "auto"}}></img>
+          <img className="banner" src={banner}></img>
           <p>Since its original publication in 1987, <b>JoJo's Bizarre Adventure</b> has been the focus of many videogames from different studios and game engines. These games are a large talking point within the JoJo community, and we here at <b>JoJo's Bizarre Modding Community</b> find joy in harnessing our creativity to make these games even more fun to experience!<br/><br/>
           Our <b>mission</b> is to provide the resources, information, and assistance required for modders, old and new, to unleash their passions and ideas.<br/><br/>
           Primarily based on Discord, we have expanded to other platforms as well, hence the creation of this website to serve as a <b>portal</b> for JoJo modding things.

@@ -191,6 +191,7 @@ html {
 
 .about-us {
   margin: 0 200px;
+  margin-bottom: 30px;
   padding: 10px 40px;
   padding-top: 30px;
   background-color: rgb(0, 0, 0, 0.6);
@@ -208,7 +209,7 @@ html {
   font-family: 'Komika', sans-serif;
   transition: 0.5s ease;
 }
-.footer a{
+.footer a {
   color: white;
 }
 .footer.hidden {
@@ -218,6 +219,13 @@ html {
 .footer.visible {
   transform: translateY(0);
   opacity: 100%;
+}
+
+.banner {
+  display: block;
+  width: 500px;
+  margin: 15px auto;
+  border: solid 3px white;
 }
 
 h1 {
