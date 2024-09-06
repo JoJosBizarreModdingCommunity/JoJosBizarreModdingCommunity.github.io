@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Helsinki';
+    src: local('Helsinki'), url("./fonts/helsinki.ttf") format('truetype');
+}
+@font-face {
+    font-family: 'Komika-Hand';
+    src: local('Komika-Hand'), url("./fonts/Komika_Hand_Bold.ttf") format('truetype');
+}
+@font-face {
+    font-family: 'Komika';
+    src: local('Komika'), url("./fonts/KOMTXT__.ttf") format('truetype');
+}
+@font-face {
+    font-family: 'Komika-Bold';
+    src: local('Komika-Bold'), url("./fonts/KOMTXTB_.ttf") format('truetype');
+}
