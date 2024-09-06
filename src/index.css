@@ -198,14 +198,26 @@ html {
 }
 
 .footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100vw;
   background-color: black;
   height: 30px;
   text-align: center;
   padding-top: 10px;
   font-family: 'Komika', sans-serif;
+  transition: 0.5s ease;
 }
 .footer a{
   color: white;
+}
+.footer.hidden {
+  transform: translateY(10px);
+  opacity: 0%;
+}
+.footer.visible {
+  transform: translateY(0);
+  opacity: 100%;
 }
 
 h1 {

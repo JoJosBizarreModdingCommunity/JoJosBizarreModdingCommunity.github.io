@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 // Scripts
 import { mod } from "./utils.js"
@@ -64,6 +64,25 @@ function MainPage() {
     reloadNews();
   }
 
+  const [showFooter, setShowFooter] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      console.log(window.scrollY);
+      if (window.scrollY > 700) { // Change 300 to however many pixels you want
+        setShowFooter(true);
+      } else {
+        setShowFooter(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll); // Cleanup event listener
+    };
+  }, []);
+
   return (
     <>
       <div className="bg-container">
@@ -80,16 +99,16 @@ function MainPage() {
       <img className="arrow" style={{inset: "0 0 50px 1150px", "--rotation": "1"}} src={arrow} onClick={() => changeNews(true)}></img>
 
       <div className="icons">
-        <Icon link="https://discord.gg/eTFmC49RzF" name="Discord" color="rgb(88, 101, 242)" target="_blank" />
-        <Icon link="https://twitter.com/jojomodofficial" name="Twitter" color="rgb(29, 155, 240)" target="_blank" />
-        <Icon link="https://www.youtube.com/@JoJoModOfficial" name="YouTube" color="rgb(255, 0, 0)" target="_blank" />
+        <Icon link="https://discord.jojomodding.com" name="Discord" color="rgb(88, 101, 242)" target="_blank" />
+        <Icon link="https://twitter.jojomodding.com" name="Twitter" color="rgb(29, 155, 240)" target="_blank" />
+        <Icon link="https://youtube.jojomodding.com" name="YouTube" color="rgb(255, 0, 0)" target="_blank" />
         <Icon link="#mod-pages" color="rgb(218, 142, 53)" name="NexusMods" />
       </div>
 
       <img className="jjbmc-logo" src={logo} alt="Logo"/>
       <div className="nav-background"></div>
       <div className="navbar">
-        <a href="https://jojomodding.miraheze.org/" target="_blank">Wiki</a> |&nbsp;
+        <a href="https://wiki.jojomodding.com" target="_blank">Wiki</a> |&nbsp;
         <a href="https://jojomodding.miraheze.org/wiki/JoJo%27s_Bizarre_Modding_Wiki#tabber-Roadmaps" target="_blank">Roadmaps</a> |&nbsp;
         <a href="#about-us">About Us</a>
       </div>
@@ -110,7 +129,7 @@ function MainPage() {
         </div>
       </div>
 
-      <div className="footer"><a href="#top">back to top</a></div>
+      <div className={`footer ${showFooter ? 'visible' : 'hidden'}`}><a href="#top">back to top</a></div>
     </>
   );
 }
