@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.39c418bd.css",
-    "main.js": "/static/js/main.8bd874e7.js",
+    "main.css": "/static/css/main.3ceac43d.css",
+    "main.js": "/static/js/main.5aa549a9.js",
     "static/js/453.56bb96ee.chunk.js": "/static/js/453.56bb96ee.chunk.js",
+    "static/media/test.mp4": "/static/media/test.580729dc6969d3a05243.mp4",
     "static/media/Banner.png": "/static/media/Banner.e42c51c17621d0af1a75.png",
     "static/media/Useless_Butler's_character_competition.png": "/static/media/Useless_Butler's_character_competition.9635efab62f899b7bbe5.png",
     "static/media/Useless_Maid's_Lisa_Lisa_competition.png": "/static/media/Useless_Maid's_Lisa_Lisa_competition.aa6469bb4533a03b8b03.png",
@@ -35,12 +36,12 @@
     "static/media/Background.png": "/static/media/Background.2113c030176f78c5ecea.png",
     "static/media/YouTube.png": "/static/media/YouTube.c8f3e8f286c46725b712.png",
     "index.html": "/index.html",
-    "main.39c418bd.css.map": "/static/css/main.39c418bd.css.map",
-    "main.8bd874e7.js.map": "/static/js/main.8bd874e7.js.map",
+    "main.3ceac43d.css.map": "/static/css/main.3ceac43d.css.map",
+    "main.5aa549a9.js.map": "/static/js/main.5aa549a9.js.map",
     "453.56bb96ee.chunk.js.map": "/static/js/453.56bb96ee.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.39c418bd.css",
-    "static/js/main.8bd874e7.js"
+    "static/css/main.3ceac43d.css",
+    "static/js/main.5aa549a9.js"
   ]
 }
