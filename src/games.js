@@ -1,4 +1,4 @@
-import "./games.css";
+import "./styles/games.css";
 import game_art from "./assets/game_art.js"
 
 function Game({link, name}) {

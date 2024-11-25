@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  overflow-x: visible; /* Stop background animation from creating horizontal scroll. */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {
+  text-align: center;
+  font-size: 60px;
+  margin: 0;
+  font-family: 'Helsinki', sans-serif;
+  color: white;
+  user-select: none;
+}
+
+p {
+  text-align: left;
+  font-size: 22px;
+  font-family: 'Komika', sans-serif;
+}
+
+@keyframes slide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(calc(-373px * 3), 0, 0); /* The image width */
+  }
+}
+
+.bg-container {
+  position: relative;
+  overflow: hidden;
+  height: 100dvh;
+  width: 100%;
+}
+
+.bg {
+  position: absolute;
+  z-index: -1;
+  background: linear-gradient(to bottom, rgba(238, 255, 1, 0.02), rgba(11, 25, 41, 0.73)), url("../assets/images/backgrounds/Background.png") repeat;
+  background-size: 150px;
+  height: 100vh;
+  width: 5076px;
+  animation: slide 60s linear infinite;
+}
+
+.nav-background {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 495px;
+  height: 80px;
+  border-bottom-left-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.navbar {
+  position: absolute;
+  top: 13px;
+  right: 30px;
+  text-align: right;
+  font-family: "Komika-Hand", sans-serif;
+  font-size: 30px;
+  user-select: none;
+}
+.navbar, .navbar a {
+  color: white;
+}
+
+.border {
+  background-color: white;
+  height: 5px;
+}
+
+.underneath {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(80, 80, 80, 0.5)), url("../assets/images/backgrounds/Background2.png") repeat;
+  background-size: 100px;
+  padding-bottom: 40px;
+}
+
+.about-us {
+  margin: 0 200px;
+  margin-bottom: 30px;
+  padding: 10px 40px;
+  padding-top: 30px;
+  background-color: rgb(0, 0, 0, 0.6);
+  color: white;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100vw;
+  background-color: black;
+  height: 30px;
+  text-align: center;
+  padding-top: 10px;
+  font-family: 'Komika', sans-serif;
+  transition: 0.5s ease;
+  user-select: none;
+}
+.footer a {
+  color: white;
+}
+.footer.hidden {
+  transform: translateY(10px);
+  opacity: 0%;
+}
+.footer.visible {
+  transform: translateY(0);
+  opacity: 100%;
+}
+
+.banner {
+  display: block;
+  width: 500px;
+  margin: 15px auto;
+  border: solid 3px white;
+}
+
+/* SCROLL BAR */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1d1d1d;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #7c7c7c;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}

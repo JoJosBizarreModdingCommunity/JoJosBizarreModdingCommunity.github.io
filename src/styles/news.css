@@ -1,0 +1,100 @@
+.jjbmc-logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 350px;
+}
+
+:root {
+    --news-height: 400px;
+}
+
+.news-section {
+    position: relative;
+    display: flex;
+    bottom: 28%;
+    height: 100%;
+}
+
+.scrollbox {
+    display: inline-flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-direction: row;
+    scroll-snap-type: x mandatory;
+    align-items: center;
+    padding: 0 400px;
+    gap: 80px;
+}
+
+.news-post, .news-post a {
+    display: flex;
+    position: relative;
+    top: 60px;
+    scroll-snap-align: center;
+    transition: 0.1s;
+    user-select: none;
+}
+.news-post:hover {
+    transform: scale(105%);
+    filter: brightness(120%);
+}
+.news-post:hover .news-text, .news-post:hover .back {
+    opacity: 0%;
+}
+
+.news-image {
+    height: var(--news-height);
+    width: auto;
+    border: 5px solid black;
+    filter: brightness(100%) drop-shadow(0 10px 0.75rem black);
+    transition: 0.1s;
+}
+
+.news-text {
+    position: absolute;
+    margin: 0;
+    bottom: 8px;
+    left: 20px;
+    color: white;
+    font-family: "Komika-Bold", sans-serif;
+    font-size: 35px;
+    text-align: left;
+    transition: 0.2s;
+}
+
+.back {
+    position: absolute;
+    margin: 0;
+    bottom: -1px;
+    width: calc(var(--news-height) * 1920/1080 + 10px);
+    height: 55px;
+    background-color: black;
+    opacity: 75%;
+    transition: 0.2s;
+}
+  
+.icons {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    height: 180px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+  
+.icon {
+    width: 130px;
+    height: 130px;
+    background-size: contain;
+    border: 5px solid white;
+    border-radius: 30px;
+    filter: drop-shadow(0 10px 0.75rem black);
+    transition: 0.1s;
+}
+.icon:hover {
+    transform: scale(110%) rotate(10deg);
+}
