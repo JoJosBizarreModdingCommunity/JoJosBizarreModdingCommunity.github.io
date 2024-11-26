@@ -20,7 +20,6 @@ function MainPage() {
 
   useEffect(() => {
     const handleScroll = () => {
-      console.log(window.scrollY);
       if (window.scrollY > 700) { // Change 300 to however many pixels you want
         setShowFooter(true);
       } else {
@@ -42,13 +41,15 @@ function MainPage() {
 
         <News/>
 
-        <img className="jjbmc-logo" src={logo} alt="Logo"/>
-        <div className="nav-background"></div>
+        <div className="jjbmc-logo">
+          <img src={logo} alt="Logo"/>
+        </div>
+        {/* <div className="nav-background"></div>
         <div className="navbar">
           <a href="https://wiki.jojomodding.com" target="_blank">Wiki</a> |&nbsp;
           <a href="https://jojomodding.miraheze.org/wiki/JoJo%27s_Bizarre_Modding_Wiki#tabber-Roadmaps" target="_blank">Roadmaps</a> |&nbsp;
           <a href="#about-us">About Us</a>
-        </div>
+        </div> */}
       </div>
 
       <div className="border"></div>

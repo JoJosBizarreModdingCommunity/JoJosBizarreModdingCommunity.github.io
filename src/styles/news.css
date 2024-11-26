@@ -3,6 +3,34 @@
     top: 10px;
     left: 10px;
     width: 350px;
+    pointer-events: none;
+}
+.jjbmc-logo img {
+    width: 350px;
+}
+
+.icons {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+  
+.icon {
+    width: 130px;
+    height: 130px;
+    background-size: contain;
+    border: 5px solid white;
+    border-radius: 30px;
+    filter: drop-shadow(0 10px 0.75rem black);
+    transition: 0.1s;
+}
+.icon:hover {
+    transform: scale(110%) rotate(10deg);
 }
 
 :root {
@@ -12,7 +40,6 @@
 .news-section {
     position: relative;
     display: flex;
-    bottom: 28%;
     height: 100%;
 }
 
@@ -23,14 +50,14 @@
     flex-direction: row;
     scroll-snap-type: x mandatory;
     align-items: center;
-    padding: 0 400px;
-    gap: 80px;
+    padding: 0 50%;
+    gap: 100px;
 }
 
 .news-post, .news-post a {
     display: flex;
     position: relative;
-    top: 60px;
+    top: -10px;
     scroll-snap-align: center;
     transition: 0.1s;
     user-select: none;
@@ -55,7 +82,7 @@
     position: absolute;
     margin: 0;
     bottom: 8px;
-    left: 20px;
+    padding: 0 20px;
     color: white;
     font-family: "Komika-Bold", sans-serif;
     font-size: 35px;
@@ -73,28 +100,40 @@
     opacity: 75%;
     transition: 0.2s;
 }
-  
-.icons {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    height: 180px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-}
-  
-.icon {
-    width: 130px;
-    height: 130px;
-    background-size: contain;
-    border: 5px solid white;
-    border-radius: 30px;
-    filter: drop-shadow(0 10px 0.75rem black);
-    transition: 0.1s;
-}
-.icon:hover {
-    transform: scale(110%) rotate(10deg);
+@media only screen and (max-width: 768px) {
+    .jjbmc-logo {
+        position: absolute;
+        top: 30px;
+        left: 10;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        pointer-events: none;
+    }
+    .jjbmc-logo img {
+        width: 350px;
+    }
+
+    :root {
+        --news-height: 150px;
+    }
+
+    .scrollbox {
+        gap: 30px;
+    }
+
+    .news-post {
+        top: 10px;
+    }
+
+    .news-text {
+        top: 165px;
+        font-size: 22px;
+    }
+    .back {
+        bottom: -75px;
+        height: 95px;
+        z-index: -1;
+    }
 }

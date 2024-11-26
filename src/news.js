@@ -72,6 +72,13 @@ export function News() {
 
     return (
         <>
+        {/* <div className="icons">
+            <Icon link="https://discord.jojomodding.com" name="Discord" color="rgb(88, 101, 242)" target="_blank" />
+            <Icon link="https://twitter.jojomodding.com" name="Twitter" color="rgb(29, 155, 240)" target="_blank" />
+            <Icon link="https://youtube.jojomodding.com" name="YouTube" color="rgb(255, 0, 0)" target="_blank" />
+            <Icon link="#mod-pages" color="rgb(218, 142, 53)" name="NexusMods" />
+        </div> */}
+
         <div className="news-section">
         <div className="scrollbox">
             <Post name="ASBR_modding_comes_to_Nintendo_Switch"/>
@@ -79,13 +86,6 @@ export function News() {
             <Post name="Useless_Butler's_character_competition"/>
             <Post name="Sofdec2_discoveries"/>
         </div>
-        </div>
-
-        <div className="icons">
-            <Icon link="https://discord.jojomodding.com" name="Discord" color="rgb(88, 101, 242)" target="_blank" />
-            <Icon link="https://twitter.jojomodding.com" name="Twitter" color="rgb(29, 155, 240)" target="_blank" />
-            <Icon link="https://youtube.jojomodding.com" name="YouTube" color="rgb(255, 0, 0)" target="_blank" />
-            <Icon link="#mod-pages" color="rgb(218, 142, 53)" name="NexusMods" />
         </div>
         </>
     );

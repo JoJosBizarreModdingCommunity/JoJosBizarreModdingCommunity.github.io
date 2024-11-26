@@ -10,7 +10,7 @@
 }
 
 .horizontal-scroll {
-    overflow: auto; /* Enable horizontal scrolling */
+    overflow: auto;
     display: inline-flex;
     flex-direction: row;
     scroll-snap-type: x mandatory;
@@ -189,5 +189,13 @@
     }
     100% {
         opacity: 100%;
+    }
+}
+
+/* MOBILE */
+
+@media only screen and (max-width: 768px) {
+    .mod-pages {
+        margin: 0;
     }
 }
