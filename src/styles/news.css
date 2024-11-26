@@ -11,26 +11,34 @@
 
 .icons {
     position: absolute;
-    top: 10px;
+    bottom: 5cqb;
     width: 100%;
-    height: 180px;
+    z-index: 1;
+
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 50px;
+    gap: 40px;
 }
-  
+
 .icon {
-    width: 130px;
-    height: 130px;
-    background-size: contain;
+    width: 20dvw;
     border: 5px solid white;
     border-radius: 30px;
     filter: drop-shadow(0 10px 0.75rem black);
     transition: 0.1s;
+    overflow: hidden;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
-.icon:hover {
-    transform: scale(110%) rotate(10deg);
+.icon img {
+    height: 100%;
+}
+.icon p {
+    margin-right: 25px;
+    color: white;
+    font-size: 40px;
 }
 
 :root {
@@ -62,15 +70,9 @@
     transition: 0.1s;
     user-select: none;
 }
-.news-post:hover {
-    transform: scale(105%);
-    filter: brightness(120%);
-}
-.news-post:hover .news-text, .news-post:hover .back {
-    opacity: 0%;
-}
 
 .news-image {
+    aspect-ratio: 1920 / 1080;
     height: var(--news-height);
     width: auto;
     border: 5px solid black;
@@ -101,6 +103,25 @@
     transition: 0.2s;
 }
 
+/* DESKTOP ONLY */
+@media only screen and (min-width: 768px) {
+    .icon {
+        height: 90px;
+    }
+    .icon:hover {
+        transform: scale(1.1);
+    }
+
+    .news-post:hover {
+        transform: scale(105%);
+        filter: brightness(120%);
+    }
+    .news-post:hover .news-text, .news-post:hover .back {
+        opacity: 0%;
+    }
+}
+
+/* MOBILE ONLY */
 @media only screen and (max-width: 768px) {
     .jjbmc-logo {
         position: absolute;
@@ -124,7 +145,7 @@
     }
 
     .news-post {
-        top: 10px;
+        top: 5px;
     }
 
     .news-text {
@@ -135,5 +156,29 @@
         bottom: -75px;
         height: 95px;
         z-index: -1;
+    }
+
+    .icons {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        height: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        z-index: 1;
+    }
+    .icon {
+        aspect-ratio: 1 / 1;
+        width: 18dvw;
+        background-size: contain;
+        border: 5px solid white;
+        border-radius: 30px;
+        filter: drop-shadow(0 10px 0.75rem black);
+        transition: 0.1s;
+    }
+    .icon p {
+        display: none;
     }
 }

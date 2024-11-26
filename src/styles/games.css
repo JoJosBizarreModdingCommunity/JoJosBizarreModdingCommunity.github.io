@@ -20,15 +20,8 @@
     display: flex;
     flex-direction: column;
     margin: 5px 9.5px;
-    filter: blur(3px) brightness(30%);
     transition: 0.1s;
     scroll-snap-align: center;
-}
-.game-column:hover {
-    filter: blur(0) brightness(100%);
-}
-.horizontal-scroll:not(:hover) .game-column {
-    filter: blur(0) brightness(100%);
 }
 
 .game {
@@ -39,19 +32,10 @@
     border: 3px solid white;
     transition: 0.1s;
 }
-.game:hover {
-    transform: scale(105%);
-    filter: grayscale(0%);
-}
 .game-back {
     display: block;
     width: 330px;
-    filter: brightness(70%) drop-shadow(0 10px 0.75rem black);
     transition: 0.1s;
-}
-.game:hover .game-back {
-    transform: scale(110%);
-    filter: brightness(130%) drop-shadow(0 10px 0.75rem black);
 }
 
 .game-logo {
@@ -65,10 +49,6 @@
     width: 330px;
     inset: 0 0 0 0;
     filter: brightness(70%);
-}
-.game:hover .RPCS3-prop {
-    filter: brightness(100%);
-    animation: RPCS3-anim 2s ease-in-out infinite;
 }
 
 @keyframes RPCS3-anim {
@@ -88,10 +68,6 @@
     width: 330px;
     inset: 0 0 0 0;
     filter: brightness(70%);
-}
-.game:hover .JoJoAPI-prop {
-    filter: brightness(100%);
-    animation: JoJoAPI-anim 5s infinite;
 }
 
 @keyframes JoJoAPI-anim {
@@ -117,10 +93,6 @@
     width: 330px;
     inset: 0 0 0 0;
     filter: brightness(70%);
-}
-.game:hover .AllStarBattleR-prop {
-    filter: brightness(100%);
-    animation: AllStarBattleR-anim 0.5s ease-in-out infinite;
 }
 
 @keyframes AllStarBattleR-anim {
@@ -148,10 +120,6 @@
     filter: brightness(70%);
     opacity: 30%;
 }
-.game:hover .EyesOfHeaven-prop {
-    filter: brightness(100%);
-    animation: EyesOfHeaven-anim 3s ease-in-out infinite;
-}
 
 @keyframes EyesOfHeaven-anim {
     0% {
@@ -175,10 +143,6 @@
     filter: brightness(70%);
     opacity: 100%;
 }
-.game:hover .AllStarBattle-prop {
-    filter: brightness(100%);
-    animation: AllStarBattle-anim 3s ease-in-out infinite;
-}
 
 @keyframes AllStarBattle-anim {
     0% {
@@ -192,10 +156,89 @@
     }
 }
 
-/* MOBILE */
+/* PC ONLY */
+@media only screen and (min-width: 768px) {
+    .game-column {
+        filter: blur(3px) brightness(30%);
+    }
+    .game-column:hover {
+        filter: blur(0) brightness(100%);
+    }
 
+    .game-back {
+        filter: brightness(70%) drop-shadow(0 10px 0.75rem black);
+    }
+
+    .horizontal-scroll:not(:hover) .game-column {
+        filter: blur(0) brightness(100%);
+    }
+    .game:hover {
+        transform: scale(105%);
+        filter: grayscale(0%);
+    }
+    .game:hover .game-back {
+        transform: scale(110%);
+        filter: brightness(130%) drop-shadow(0 10px 0.75rem black);
+    }
+    
+    .game:hover .RPCS3-prop {
+        filter: brightness(100%);
+        animation: RPCS3-anim 2s ease-in-out infinite;
+    }
+    .game:hover .JoJoAPI-prop {
+        filter: brightness(100%);
+        animation: JoJoAPI-anim 5s infinite;
+    }
+    .game:hover .AllStarBattleR-prop {
+        filter: brightness(100%);
+        animation: AllStarBattleR-anim 0.5s ease-in-out infinite;
+    }
+    .game:hover .EyesOfHeaven-prop {
+        filter: brightness(100%);
+        animation: EyesOfHeaven-anim 3s ease-in-out infinite;
+    }
+    .game:hover .AllStarBattle-prop {
+        filter: brightness(100%);
+        animation: AllStarBattle-anim 3s ease-in-out infinite;
+    }
+}
+
+:root {
+    --mobile-games-size: 230px;
+}
+/* MOBILE ONLY */
 @media only screen and (max-width: 768px) {
     .mod-pages {
-        margin: 0;
+        margin: 10px;
+    }
+
+    .game-back {
+        width: var(--mobile-games-size);
+    }
+    .game-logo {
+        position: absolute;
+        width: var(--mobile-games-size);
+        inset: 0 0 0 0;
+    }
+
+    .RPCS3-prop {
+        animation: RPCS3-anim 2s ease-in-out infinite;
+        width: var(--mobile-games-size);
+    }
+    .JoJoAPI-prop {
+        animation: JoJoAPI-anim 5s infinite;
+        width: var(--mobile-games-size);
+    }
+    .AllStarBattleR-prop {
+        animation: AllStarBattleR-anim 0.5s ease-in-out infinite;
+        width: var(--mobile-games-size);
+    }
+    .EyesOfHeaven-prop {
+        animation: EyesOfHeaven-anim 3s ease-in-out infinite;
+        width: var(--mobile-games-size);
+    }
+    .AllStarBattle-prop {
+        animation: AllStarBattle-anim 3s ease-in-out infinite;
+        width: var(--mobile-games-size);
     }
 }

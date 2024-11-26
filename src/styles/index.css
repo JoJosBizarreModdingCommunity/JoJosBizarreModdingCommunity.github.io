@@ -111,7 +111,7 @@ p {
 
 .footer {
   position: fixed;
-  bottom: 0px;
+  bottom: -1px;
   width: 100vw;
   background-color: black;
   height: 30px;

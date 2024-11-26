@@ -56,9 +56,9 @@ function MainPage() {
       <div className="underneath">
         <Games/>
 
-        <div id="roadmaps">
+        {/* <div id="roadmaps">
           <h1>Roadmaps</h1>
-        </div>
+        </div> */}
 
         <div id="about-us" className="about-us">
           <h1>About Us</h1>
