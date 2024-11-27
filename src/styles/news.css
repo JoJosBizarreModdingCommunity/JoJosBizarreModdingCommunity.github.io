@@ -1,6 +1,6 @@
 .icons {
     position: absolute;
-    bottom: 5cqb;
+    bottom: 45px;
     width: 100%;
     z-index: 1;
 
@@ -13,6 +13,7 @@
     width: 20dvw;
     border: 5px solid white;
     border-radius: 30px;
+    will-change: filter;
     filter: drop-shadow(0 10px 0.75rem black);
     transition: 0.1s;
     overflow: hidden;
