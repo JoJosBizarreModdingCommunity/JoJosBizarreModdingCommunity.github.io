@@ -1,12 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.15264683.css",
-    "main.js": "/static/js/main.f1a01605.js",
+    "main.css": "/static/css/main.a7491a5d.css",
+    "main.js": "/static/js/main.e2121415.js",
     "static/js/453.56bb96ee.chunk.js": "/static/js/453.56bb96ee.chunk.js",
-    "static/media/test.mp4": "/static/media/test.580729dc6969d3a05243.mp4",
     "static/media/Banner.png": "/static/media/Banner.e42c51c17621d0af1a75.png",
+    "static/media/Useless_Maid's_Lisa_Lisa_competition.png": "/static/media/Useless_Maid's_Lisa_Lisa_competition.422cf952c97b0282afd8.png",
     "static/media/Useless_Butler's_character_competition.png": "/static/media/Useless_Butler's_character_competition.9635efab62f899b7bbe5.png",
-    "static/media/Useless_Maid's_Lisa_Lisa_competition.png": "/static/media/Useless_Maid's_Lisa_Lisa_competition.aa6469bb4533a03b8b03.png",
     "static/media/Eyes_of_Heaven_Back.png": "/static/media/Eyes_of_Heaven_Back.2af338c86b0166ef4e4b.png",
     "static/media/All-Star_Battle_R_Back.png": "/static/media/All-Star_Battle_R_Back.bda366d4dfdb8f87aee2.png",
     "static/media/All-Star_Battle_Back.png": "/static/media/All-Star_Battle_Back.102145cd597713d465dc.png",
@@ -19,7 +18,9 @@
     "static/media/All-Star_Battle_R_Logo.png": "/static/media/All-Star_Battle_R_Logo.4d28aa2c685439b93a19.png",
     "static/media/RPCS3_Prop.png": "/static/media/RPCS3_Prop.63a500f00cb29950bfa7.png",
     "static/media/RPCS3_Back.png": "/static/media/RPCS3_Back.97780826a118b66f4744.png",
+    "static/media/Starz 2.ttf": "/static/media/Starz 2.f2de2d44704f9e9b7261.ttf",
     "static/media/Komika_Hand_Bold.ttf": "/static/media/Komika_Hand_Bold.4c9954f9bc55beae4763.ttf",
+    "static/media/Courier Prime.ttf": "/static/media/Courier Prime.96e7b592076d71a29dd8.ttf",
     "static/media/JoJoAPI_Prop.png": "/static/media/JoJoAPI_Prop.21384508dad0470ab8b4.png",
     "static/media/NexusMods.png": "/static/media/NexusMods.ab047d42ba50c3891121.png",
     "static/media/All-Star_Battle_Prop.png": "/static/media/All-Star_Battle_Prop.8cad29a1362aa683630f.png",
@@ -31,17 +32,18 @@
     "static/media/KOMTXT__.ttf": "/static/media/KOMTXT__.e5187234c8f73869edbc.ttf",
     "static/media/Twitter.png": "/static/media/Twitter.3e0766522ad03f87ee3b.png",
     "static/media/JoJoAPI_Logo.png": "/static/media/JoJoAPI_Logo.8f833d49dcc0892c1cdf.png",
+    "static/media/basis33.regular.ttf": "/static/media/basis33.regular.2912cc5f2a34d2187f21.ttf",
     "static/media/Arrow.png": "/static/media/Arrow.de2b216c974adfc2e0f0.png",
     "static/media/helsinki.ttf": "/static/media/helsinki.7f6ed50191e6bc8910f0.ttf",
     "static/media/Background.png": "/static/media/Background.2113c030176f78c5ecea.png",
     "static/media/YouTube.png": "/static/media/YouTube.c8f3e8f286c46725b712.png",
     "index.html": "/index.html",
-    "main.15264683.css.map": "/static/css/main.15264683.css.map",
-    "main.f1a01605.js.map": "/static/js/main.f1a01605.js.map",
+    "main.a7491a5d.css.map": "/static/css/main.a7491a5d.css.map",
+    "main.e2121415.js.map": "/static/js/main.e2121415.js.map",
     "453.56bb96ee.chunk.js.map": "/static/js/453.56bb96ee.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.15264683.css",
-    "static/js/main.f1a01605.js"
+    "static/css/main.a7491a5d.css",
+    "static/js/main.e2121415.js"
   ]
 }
