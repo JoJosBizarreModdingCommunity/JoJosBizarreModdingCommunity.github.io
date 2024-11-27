@@ -7,67 +7,83 @@ import backgrounds  from "./assets/backgrounds.js"
 import arrow        from "./assets/images/Arrow.png";
 import icons        from "./assets/icons.js"
 import thumbnails   from "./assets/thumbnails.js"
-import video_test   from "./assets/test.mp4";
 
 import "./styles/news.css"
 
-const news_links = [
-    "ASBR_modding_comes_to_Nintendo_Switch",
-    "Useless_Maid's_Lisa_Lisa_competition",
-    "Useless_Butler's_character_competition",
-    "Sofdec2_discoveries"
-];
-const news_image_ref = {
-    "ASBR_modding_comes_to_Nintendo_Switch": "AsbrModdingComesToNintendoSwitch",
-    "Useless_Maid's_Lisa_Lisa_competition": "UselessMaidLisaLisaCompetition",
-    "Useless_Butler's_character_competition": "UselessButlerCharacterCompetition",
-    "Sofdec2_discoveries": "Sofdec2Discoveries"
+const news_data = {
+    "AsbrModdingComesToNintendoSwitch" : {
+        media: thumbnails["AsbrModdingComesToNintendoSwitch"],
+        type: "image",
+        link: "https://jojomodding.miraheze.org/wiki/News:ASBR_modding_comes_to_Nintendo_Switch",
+        date: {
+            year: 2024,
+            month: 8,
+            day: 8
+        },
+        desc: "We've seen a massive breakthrough for ASBR players on Nintendo Switch..."
+    },
+    "UselessMaidLisaLisaCompetition" : {
+        media: thumbnails["UselessMaidLisaLisaCompetition"],
+        type: "image",
+        link: "https://jojomodding.miraheze.org/wiki/News:Useless_Maid%27s_Lisa_Lisa_Competition",
+        date: {
+            year: 2024,
+            month: 5,
+            day: 30
+        },
+        desc: "Previously seldom modded, we held a Lisa Lisa texture competition, funded by Useless Maid..."
+    },
+    "UselessButlerCharacterCompetition" : {
+        media: thumbnails["UselessButlerCharacterCompetition"],
+        type: "image",
+        link: "https://jojomodding.miraheze.org/wiki/News:Useless_Butler%27s_Character_Competition",
+        date: {
+            year: 2024,
+            month: 5,
+            day: 1
+        },
+        desc: "Useless Butler started a character model competition with 5 remarkable submissions..."
+    },
+    "Sofdec2Discoveries" : {
+        media: thumbnails["Sofdec2Discoveries"],
+        type: "image",
+        link: "https://jojomodding.miraheze.org/wiki/News:Sofdec2_discoveries",
+        date: {
+            year: 2024,
+            month: 1,
+            day: 22
+        },
+        desc: "Sofdec2 USM modding has been made easier than ever thanks to our discovery of various tools..."
+    }
 };
 
 function Icon({link, name, color = "white", target = ""}) {
+    let text = name;
+    if (name == "NexusMods") text = "Mods";
     return (
         <a href={link} target={target}>
             <div className="icon" style={{background: `${color}`}}>
                 <img src={icons[name]}/>
-                <p>{name}</p>
+                <p>{text}</p>
             </div>
         </a>
     );
 }  
 
 export function News() {
-    let [news_index, set_news_index] = useState(0);
-    let news_id = news_links[news_index];
-    let [news_link, set_news_link] = useState("https://jojomodding.miraheze.org/wiki/News:" + news_id);
-    let [news_image, set_news_image] = useState(thumbnails[news_image_ref[news_id]]);
-    let [news_title, set_news_title] = useState(news_id.replace(/_/g, " "));
-
-    function reloadNews() {
-        news_id = news_links[news_index];
-        set_news_link("https://jojomodding.miraheze.org/wiki/News:" + news_id);
-        set_news_image(thumbnails[news_image_ref[news_id]]);
-        set_news_title(news_id.replace(/_/g, " "));
-
-        console.log("News Index: %s", news_index);
-    }
-
-    function changeNews(forward) {
-        if (forward) {
-        set_news_index(mod((news_index + 1), news_links.length));
-        } else {
-        set_news_index(mod((news_index - 1), news_links.length));
+    function Post({id}) {
+        const data = news_data[id];
+        var media = <img className="news-media" src={data.media}/>;
+        if (data.type == "video") {
+            media = <video className="news-media" src={data.media} autoPlay loop muted></video>;
         }
-        reloadNews();
-    }
-
-    function Post({name}) {
         return (
-            <a className="news-post" href={news_link} target="_blank">
+            <a className="news-post" href={data.link} target="_blank">
             <div className="news-post">
-                <img className="news-image" src={thumbnails[news_image_ref[name]]}/>
-                {/* <video className="news-image" src={video_test} autoPlay loop muted></video> */}
-                <div className="back"></div>
-                <p className="news-text">{name.replace(/_/g, " ")}</p>
+                {media}
+                <div className="news-back"></div>
+                <p className="news-date">{data.date.year}.{String(data.date.month).padStart(2, '0')}.{String(data.date.day).padStart(2, '0')}</p>
+                <p className="news-desc">{data.desc}</p>
             </div>
             </a>
         );
@@ -84,10 +100,10 @@ export function News() {
 
         <div className="news-section">
         <div className="scrollbox">
-            <Post name="ASBR_modding_comes_to_Nintendo_Switch"/>
-            <Post name="Useless_Maid's_Lisa_Lisa_competition"/>
-            <Post name="Useless_Butler's_character_competition"/>
-            <Post name="Sofdec2_discoveries"/>
+            <Post id="AsbrModdingComesToNintendoSwitch"/>
+            <Post id="UselessMaidLisaLisaCompetition"/>
+            <Post id="UselessButlerCharacterCompetition"/>
+            <Post id="Sofdec2Discoveries"/>
         </div>
         </div>
         </>

@@ -1,14 +1,3 @@
-.jjbmc-logo {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 350px;
-    pointer-events: none;
-}
-.jjbmc-logo img {
-    width: 350px;
-}
-
 .icons {
     position: absolute;
     bottom: 5cqb;
@@ -39,6 +28,7 @@
     margin-right: 25px;
     color: white;
     font-size: 40px;
+    font-family: "Helsinki";
 }
 
 :root {
@@ -69,35 +59,48 @@
     scroll-snap-align: center;
     transition: 0.1s;
     user-select: none;
+    filter: drop-shadow(0 10px 0.75rem rgba(0, 0, 0, 0.489));
 }
 
-.news-image {
+.news-media {
     aspect-ratio: 1920 / 1080;
     height: var(--news-height);
     width: auto;
     border: 5px solid black;
-    filter: brightness(100%) drop-shadow(0 10px 0.75rem black);
+    filter: brightness(100%);
     transition: 0.1s;
 }
 
-.news-text {
+.news-date {
     position: absolute;
     margin: 0;
-    bottom: 8px;
+    bottom: 75px;
     padding: 0 20px;
-    color: white;
-    font-family: "Komika-Bold", sans-serif;
-    font-size: 35px;
+    color: yellow;
+    font-family: "Courier Prime", monospace;
+    font-size: 25px;
     text-align: left;
     transition: 0.2s;
 }
 
-.back {
+.news-desc {
+    position: absolute;
+    margin: 0;
+    bottom: 14px;
+    padding: 0 20px;
+    color: white;
+    font-family: "Komika", sans-serif;
+    font-size: 25px;
+    text-align: left;
+    transition: 0.2s;
+}
+
+.news-back {
     position: absolute;
     margin: 0;
     bottom: -1px;
     width: calc(var(--news-height) * 1920/1080 + 10px);
-    height: 55px;
+    height: 115px;
     background-color: black;
     opacity: 75%;
     transition: 0.2s;
@@ -114,9 +117,11 @@
 
     .news-post:hover {
         transform: scale(105%);
+    }
+    .news-post:hover .news-media {
         filter: brightness(120%);
     }
-    .news-post:hover .news-text, .news-post:hover .back {
+    .news-post:hover .news-desc, .news-post:hover .news-back, .news-post:hover .news-date {
         opacity: 0%;
     }
 }
@@ -145,17 +150,22 @@
     }
 
     .news-post {
-        top: 5px;
+        top: -5px;
     }
 
-    .news-text {
+    .news-date {
         top: 165px;
-        font-size: 22px;
+        font-size: 14px;
     }
-    .back {
-        bottom: -75px;
-        height: 95px;
+    .news-desc {
+        top: 185px;
+        font-size: 14px;
+    }
+    .news-back {
+        bottom: -95px;
+        height: 150px;
         z-index: -1;
+        border-radius: 10px;
     }
 
     .icons {

@@ -1,16 +1,28 @@
 @font-face {
-    font-family: 'Helsinki';
-    src: local('Helsinki'), url("./fonts/helsinki.ttf") format('truetype');
+    font-family: "Helsinki";
+    src: local("Helsinki"), url("./fonts/helsinki.ttf") format("truetype");
 }
 @font-face {
-    font-family: 'Komika-Hand';
-    src: local('Komika-Hand'), url("./fonts/Komika_Hand_Bold.ttf") format('truetype');
+    font-family: "Komika-Hand";
+    src: local("Komika-Hand"), url("./fonts/Komika_Hand_Bold.ttf") format("truetype");
 }
 @font-face {
-    font-family: 'Komika';
-    src: local('Komika'), url("./fonts/KOMTXT__.ttf") format('truetype');
+    font-family: "Komika";
+    src: local("Komika"), url("./fonts/KOMTXT__.ttf") format("truetype");
 }
 @font-face {
-    font-family: 'Komika-Bold';
-    src: local('Komika-Bold'), url("./fonts/KOMTXTB_.ttf") format('truetype');
+    font-family: "Komika-Bold";
+    src: local("Komika-Bold"), url("./fonts/KOMTXTB_.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Basis33";
+    src: local("Basis33"), url("./fonts/basis33.regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Courier Prime";
+    src: local("Courier Prime"), url("./fonts/Courier-Prime/Courier Prime.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Starz";
+    src: url("./fonts/Starz 2.ttf") format("truetype");
 }

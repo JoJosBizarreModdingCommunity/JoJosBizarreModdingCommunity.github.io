@@ -36,6 +36,8 @@ p {
   font-family: 'Komika', sans-serif;
 }
 
+/* BACKGROUND */
+
 @keyframes slide {
   0% {
     transform: translate3d(0, 0, 0);
@@ -62,27 +64,53 @@ p {
   animation: slide 60s linear infinite;
 }
 
-.nav-background {
+/* LOGO */
+
+.jjbmc-logo {
   position: absolute;
-  right: 0;
-  top: 0;
-  width: 495px;
-  height: 80px;
-  border-bottom-left-radius: 20px;
-  background-color: rgba(0, 0, 0, 0.6);
+  top: 10px;
+  left: 10px;
+  width: 350px;
+  pointer-events: none;
+  z-index: 1
 }
+.jjbmc-logo img {
+  width: 350px;
+}
+
+/* NAVBAR */
 
 .navbar {
   position: absolute;
-  top: 13px;
-  right: 30px;
-  text-align: right;
-  font-family: "Komika-Hand", sans-serif;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+.nav-buttons {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  margin-right: 80px;
+
+  font-family: "Helsinki", sans-serif;
   font-size: 30px;
+  letter-spacing: 5px;
   user-select: none;
 }
-.navbar, .navbar a {
-  color: white;
+.nav-buttons a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+.nav-buttons a:hover {
+  color: yellow;
+}
+.nav-pipe {
+  margin: 0 30px;
+  font-family: "Starz";
+  color: rgba(255, 255, 255, 0.159);
 }
 
 .border {
@@ -144,6 +172,10 @@ p {
 /* MOBILE */
 
 @media only screen and (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+  
   .about-us {
     width: 100%;
   }
@@ -152,6 +184,20 @@ p {
     width: 75%;
     margin: 15px auto;
   }  
+}
+
+/* DESKTOP */
+
+@media only screen and (min-width: 768px) {
+  h1:before, h1:after {
+    font-family: "Starz";
+    content: "F";
+    margin: 0 20px;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.2);
+    position: relative;
+    bottom: 7px;
+  }
 }
 
 /* SCROLL BAR */

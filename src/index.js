@@ -15,17 +15,25 @@ import "./styles/index.css";
 import logo         from './assets/images/Logo.png';
 import banner       from "./assets/images/Banner.png";
 
+const UseDebounce = (callback, delay) => {
+  let timeout;
+  return (...args) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => callback(...args), delay);
+  };
+};
+
 function MainPage() {
   const [showFooter, setShowFooter] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = UseDebounce(() => {
       if (window.scrollY > 700) { // Change 300 to however many pixels you want
         setShowFooter(true);
       } else {
         setShowFooter(false);
       }
-    };
+    }, 100);
 
     window.addEventListener('scroll', handleScroll);
 
@@ -39,17 +47,21 @@ function MainPage() {
       <div className="bg-container">
           <div className="bg"></div>
 
-        <News/>
+          <div className="navbar">
+            <div className="nav-buttons">
+              <a href="https://wiki.jojomodding.com" target="_blank">Wiki</a>
+              <span className="nav-pipe">F</span>
+              <a href="https://jojomodding.miraheze.org/wiki/JoJo%27s_Bizarre_Modding_Wiki#tabber-Roadmaps" target="_blank">Roadmaps</a>
+              <span className="nav-pipe">F</span>
+              <a href="#about-us">About Us</a>
+            </div>
+          </div>
 
-        <div className="jjbmc-logo">
-          <img src={logo} alt="Logo"/>
-        </div>
-        {/* <div className="nav-background"></div>
-        <div className="navbar">
-          <a href="https://wiki.jojomodding.com" target="_blank">Wiki</a> |&nbsp;
-          <a href="https://jojomodding.miraheze.org/wiki/JoJo%27s_Bizarre_Modding_Wiki#tabber-Roadmaps" target="_blank">Roadmaps</a> |&nbsp;
-          <a href="#about-us">About Us</a>
-        </div> */}
+          <News/>
+
+          <div className="jjbmc-logo">
+            <img src={logo} alt="Logo"/>
+          </div>
       </div>
 
       <div className="border"></div>
