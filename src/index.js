@@ -147,6 +147,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home lang="eng"/>} />
         <Route path="/es" element={<Home lang="spa"/>} />
+        <Route path="*" element={<><p>Error 404: This page does not exist.</p><br/><a href="/">Go back!</a></>}/>
       </Routes>
     </Router>
   );
