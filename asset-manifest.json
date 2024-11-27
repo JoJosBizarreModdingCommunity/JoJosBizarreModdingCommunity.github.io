@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.2522c99e.css",
-    "main.js": "/static/js/main.e2121415.js",
+    "main.css": "/static/css/main.60e1bf39.css",
+    "main.js": "/static/js/main.dc97288a.js",
     "static/js/453.56bb96ee.chunk.js": "/static/js/453.56bb96ee.chunk.js",
+    "static/media/UDDigiKyokashoN-R.ttc": "/static/media/UDDigiKyokashoN-R.1cbab35329ce9d4d66bd.ttc",
     "static/media/Banner.png": "/static/media/Banner.e42c51c17621d0af1a75.png",
     "static/media/Useless_Maid's_Lisa_Lisa_competition.png": "/static/media/Useless_Maid's_Lisa_Lisa_competition.422cf952c97b0282afd8.png",
     "static/media/Useless_Butler's_character_competition.png": "/static/media/Useless_Butler's_character_competition.9635efab62f899b7bbe5.png",
@@ -37,13 +38,16 @@
     "static/media/helsinki.ttf": "/static/media/helsinki.7f6ed50191e6bc8910f0.ttf",
     "static/media/Background.png": "/static/media/Background.2113c030176f78c5ecea.png",
     "static/media/YouTube.png": "/static/media/YouTube.c8f3e8f286c46725b712.png",
+    "static/media/GB.svg": "/static/media/GB.562cf2c8d2e3fbce8c313a109f6aa594.svg",
     "index.html": "/index.html",
-    "main.2522c99e.css.map": "/static/css/main.2522c99e.css.map",
-    "main.e2121415.js.map": "/static/js/main.e2121415.js.map",
+    "static/media/ES.svg": "/static/media/ES.ecfd591da524266c7eb965737c851f26.svg",
+    "static/media/JP.svg": "/static/media/JP.a83ddca67e702d15183fa7545f5981d9.svg",
+    "main.60e1bf39.css.map": "/static/css/main.60e1bf39.css.map",
+    "main.dc97288a.js.map": "/static/js/main.dc97288a.js.map",
     "453.56bb96ee.chunk.js.map": "/static/js/453.56bb96ee.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2522c99e.css",
-    "static/js/main.e2121415.js"
+    "static/css/main.60e1bf39.css",
+    "static/js/main.dc97288a.js"
   ]
 }
