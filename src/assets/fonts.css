@@ -26,3 +26,7 @@
     font-family: "Starz";
     src: url("./fonts/Starz 2.ttf") format("truetype");
 }
+@font-face {
+    font-family: "Digi Kyokasho";
+    src: url("./fonts/UDDigiKyokashoN-R.ttc") format("truetype");
+}

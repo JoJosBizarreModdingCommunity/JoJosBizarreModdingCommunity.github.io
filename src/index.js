@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
@@ -14,6 +15,7 @@ import "./styles/index.css";
 // Assets
 import logo         from './assets/images/Logo.png';
 import banner       from "./assets/images/Banner.png";
+import { GetFlag }  from "./assets/flags.js";
 
 const UseDebounce = (callback, delay) => {
   let timeout;
@@ -23,7 +25,40 @@ const UseDebounce = (callback, delay) => {
   };
 };
 
-function MainPage() {
+const text_content = {
+  eng : {
+    navbar : {
+      wiki: "wiki",
+      roadmaps: "roadmaps",
+      about: "about us",
+      top: "back to top"
+    },
+    headings : {
+      mods: "mods",
+      about: "about us"
+    },
+    content : {
+      about: "Since its original publication in 1987, <b>JoJo's Bizarre Adventure</b> has been the focus of many videogames from different studios and game engines. These games are a large talking point within the JoJo community, and we here at <b>JoJo's Bizarre Modding Community</b> find joy in harnessing our creativity to make these games even more fun to experience!<br/><br/>Our <b>mission</b> is to provide the resources, information, and assistance required for modders, old and new, to unleash their passions and ideas.<br/><br/>Primarily based on Discord, we have expanded to other platforms as well, hence the creation of this website to serve as a <b>portal</b> for JoJo modding things."
+    }
+  },
+  spa : {
+    navbar : {
+      wiki: "wiki",
+      roadmaps: "planos",
+      about: "quiénes somos",
+      top: "volver arriba"
+    },
+    headings : {
+      mods: "mods",
+      about: "acerca de nosotros"
+    },
+    content : {
+      about: "Desde la publicación original en 1987, <b>JoJo's Bizarre Adventure</b> he sido el focus de muchos videojuegos de studios y game engines diferentes. These games are a large talking point within the JoJo community, and we here at <b>JoJo's Bizarre Modding Community</b> find joy in harnessing our creativity to make these games even more fun to experience!<br/><br/>Our <b>mission</b> is to provide the resources, information, and assistance required for modders, old and new, to unleash their passions and ideas.<br/><br/>Primarily based on Discord, we have expanded to other platforms as well, hence the creation of this website to serve as a <b>portal</b> for JoJo modding things."
+    }
+  }
+};
+
+function Home({lang}) {
   const [showFooter, setShowFooter] = useState(false);
 
   useEffect(() => {
@@ -42,6 +77,18 @@ function MainPage() {
     };
   }, []);
 
+  const nav_pipe = <span className="nav-pipe">F</span>;
+
+  function GrabText(group, target) {
+    return <span dangerouslySetInnerHTML={{ __html: text_content[lang][group][target]}}/>;
+  }
+
+  function LanguageButton({lang_in, code, name}) {
+    if (lang_in != lang) {
+      return <a href={`/${code}`}><span className="small-flag"><img src={GetFlag(lang_in)}/>{name}</span></a>;
+    }
+  }
+
   return (
     <>
       <div className="bg-container">
@@ -49,15 +96,25 @@ function MainPage() {
 
           <div className="navbar">
             <div className="nav-buttons">
-              <a href="https://wiki.jojomodding.com" target="_blank">Wiki</a>
-              <span className="nav-pipe">F</span>
-              <a href="https://jojomodding.miraheze.org/wiki/JoJo%27s_Bizarre_Modding_Wiki#tabber-Roadmaps" target="_blank">Roadmaps</a>
-              <span className="nav-pipe">F</span>
-              <a href="#about-us">About Us</a>
+              <a href="https://wiki.jojomodding.com" target="_blank">{GrabText("navbar", "wiki")}</a>
+              {nav_pipe}
+              <a href="https://jojomodding.miraheze.org/wiki/JoJo%27s_Bizarre_Modding_Wiki#tabber-Roadmaps" target="_blank">{GrabText("navbar", "roadmaps")}</a>
+              {nav_pipe}
+              <a href="#about-us">{GrabText("navbar", "about")}</a>
+              {nav_pipe}
+              <div className="flag">
+                <div className="flag-overflow"><img src={GetFlag(lang)}/></div>
+                <div className="language-hitbox"></div>
+                <div className="language-dropdown">
+                  <LanguageButton lang_in="eng" code="" name="English"/>
+                  <LanguageButton lang_in="spa" code="es" name="español"/>
+                  <LanguageButton lang_in="jpn" code="jp" name="日本語"/>
+                </div>
+              </div>
             </div>
           </div>
 
-          <News/>
+          <News lang={lang}/>
 
           <div className="jjbmc-logo">
             <img src={logo} alt="Logo"/>
@@ -73,24 +130,32 @@ function MainPage() {
         </div> */}
 
         <div id="about-us" className="about-us">
-          <h1>About Us</h1>
+          <h1>{GrabText("headings", "about")}</h1>
           <img className="banner" src={banner}></img>
-          <p>Since its original publication in 1987, <b>JoJo's Bizarre Adventure</b> has been the focus of many videogames from different studios and game engines. These games are a large talking point within the JoJo community, and we here at <b>JoJo's Bizarre Modding Community</b> find joy in harnessing our creativity to make these games even more fun to experience!<br/><br/>
-          Our <b>mission</b> is to provide the resources, information, and assistance required for modders, old and new, to unleash their passions and ideas.<br/><br/>
-          Primarily based on Discord, we have expanded to other platforms as well, hence the creation of this website to serve as a <b>portal</b> for JoJo modding things.
-          </p>
+          <p>{GrabText("content", "about")}</p>
         </div>
       </div>
 
-      <div className={`footer ${showFooter ? 'visible' : 'hidden'}`}><a href="#top">back to top</a></div>
+      <div className={`footer ${showFooter ? 'visible' : 'hidden'}`}><a href="#top">{GrabText("navbar", "top")}</a></div>
     </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home lang="eng"/>} />
+        <Route path="/es" element={<Home lang="spa"/>} />
+      </Routes>
+    </Router>
   );
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <MainPage />
+    <App />
   </React.StrictMode>
 );
 

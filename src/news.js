@@ -20,7 +20,10 @@ const news_data = {
             month: 8,
             day: 8
         },
-        desc: "We've seen a massive breakthrough for ASBR players on Nintendo Switch..."
+        desc: {
+            eng: "We've seen a massive breakthrough for ASBR players on Nintendo Switch...",
+            spa: "Hemos visto un gran avance para los jugadores de ASBR en Nintendo Switch..."
+        }
     },
     "UselessMaidLisaLisaCompetition" : {
         media: thumbnails["UselessMaidLisaLisaCompetition"],
@@ -31,7 +34,10 @@ const news_data = {
             month: 5,
             day: 30
         },
-        desc: "Previously seldom modded, we held a Lisa Lisa texture competition, funded by Useless Maid..."
+        desc: {
+            eng: "Previously seldom modded, we held a Lisa Lisa texture competition, funded by Useless Maid...",
+            spa: "Organizamos un concurso de texturas para la Lisa Lisa solitaria, financiado por Useless Maid..."
+        }
     },
     "UselessButlerCharacterCompetition" : {
         media: thumbnails["UselessButlerCharacterCompetition"],
@@ -42,7 +48,10 @@ const news_data = {
             month: 5,
             day: 1
         },
-        desc: "Useless Butler started a character model competition with 5 remarkable submissions..."
+        desc: {
+            eng: "Useless Butler started a character model competition with 5 remarkable submissions...",
+            spa: "Useless Butler inició una competencia de modelos, y hay 5 presentaciones geniales..."
+        }
     },
     "Sofdec2Discoveries" : {
         media: thumbnails["Sofdec2Discoveries"],
@@ -53,7 +62,10 @@ const news_data = {
             month: 1,
             day: 22
         },
-        desc: "Sofdec2 USM modding has been made easier than ever thanks to our discovery of various tools..."
+        desc: {
+            eng: "Sofdec2 USM modding has been made easier than ever thanks to our discovery of various tools...",
+            spa: "El modding de Sofdec2 se ha hecho súper fácil gracias al descubrimiento de varias herramientas..."
+        }
     }
 };
 
@@ -70,7 +82,7 @@ function Icon({link, name, color = "white", target = ""}) {
     );
 }  
 
-export function News() {
+export function News({lang}) {
     function Post({id}) {
         const data = news_data[id];
         var media = <img className="news-media" src={data.media}/>;
@@ -83,7 +95,7 @@ export function News() {
                 {media}
                 <div className="news-back"></div>
                 <p className="news-date">{data.date.year}.{String(data.date.month).padStart(2, '0')}.{String(data.date.day).padStart(2, '0')}</p>
-                <p className="news-desc">{data.desc}</p>
+                <p className="news-desc">{data.desc[lang]}</p>
             </div>
             </a>
         );

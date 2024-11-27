@@ -60,6 +60,7 @@
     scroll-snap-align: center;
     transition: 0.1s;
     user-select: none;
+    will-change: filter;
     filter: drop-shadow(0 10px 0.75rem rgba(0, 0, 0, 0.489));
 }
 
@@ -183,11 +184,6 @@
     .icon {
         aspect-ratio: 1 / 1;
         width: 18dvw;
-        background-size: contain;
-        border: 5px solid white;
-        border-radius: 30px;
-        filter: drop-shadow(0 10px 0.75rem black);
-        transition: 0.1s;
     }
     .icon p {
         display: none;
