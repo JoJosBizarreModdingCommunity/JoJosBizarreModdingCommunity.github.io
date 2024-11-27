@@ -64,12 +64,12 @@
 }
 
 .news-media {
-    aspect-ratio: 1920 / 1080;
     height: var(--news-height);
-    width: auto;
+    width: calc(var(--news-height) * 1920/1080);
     border: 5px solid black;
     filter: brightness(100%);
     transition: 0.1s;
+    background: grey;
 }
 
 .news-date {
