@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
@@ -101,7 +101,7 @@ function Home({lang}) {
 
   function LanguageButton({lang_in, code, name}) {
     if (lang_in != lang) {
-      return <a href={`/${code}`}><span className="small-flag"><img src={GetFlag(lang_in)}/>{name}</span></a>;
+      return <Link to={`/${code}`}><span className="small-flag"><img src={GetFlag(lang_in)}/>{name}</span></Link>;
     }
   }
 
