@@ -34,3 +34,7 @@
     font-family: "Yu Mincho";
     src: local("Yu Mincho"), url("./fonts/yumindb.ttf") format("truetype");
 }
+@font-face {
+    font-family: "Gen Jyuu";
+    src: url("./fonts/Gen Jyuu Gothic Monospace Heavy.ttf") format("truetype");
+}

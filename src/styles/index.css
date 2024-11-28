@@ -25,7 +25,7 @@ h1 {
   text-align: center;
   font-size: 60px;
   margin: 0;
-  font-family: "Helsinki", "Yu Mincho", sans-serif;
+  font-family: "Helsinki", "Gen Jyuu", sans-serif;
   color: white;
   user-select: none;
 }
@@ -71,11 +71,22 @@ p {
   top: 10px;
   left: 10px;
   width: 350px;
-  pointer-events: none;
-  z-index: 1
+  z-index: 1;
+  user-select: none;
 }
 .jjbmc-logo img {
   width: 350px;
+}
+
+.wonder-of-u {
+  position: absolute;
+  top: 25px;
+  left: 200px;
+  height: 150px;
+  user-select: none;
+}
+.wonder-of-u img {
+  height: 100%;
 }
 
 /* NAVBAR */
@@ -96,7 +107,7 @@ p {
   margin-left: auto;
   margin-right: 80px;
 
-  font-family: "Helsinki", "Yu Mincho", sans-serif;
+  font-family: "Helsinki", "Gen Jyuu", sans-serif;
   font-size: 30px;
   letter-spacing: 5px;
   user-select: none;
@@ -178,6 +189,10 @@ p {
 
 /* OTHER */
 
+.markdown a {
+  color: white;
+}
+
 .border {
   background-color: white;
   height: 5px;
@@ -190,16 +205,17 @@ p {
 }
 
 .about-us {
-  width: 72%;
+  width: 70%;
   margin: auto;
   margin-bottom: 30px;
-  padding-top: 30px;
   background-color: rgb(0, 0, 0, 0.6);
   color: white;
 }
+.about-us-content {
+  padding: 30px 50px;
+}
 .about-us p {
-  padding: 10px 40px;
-  padding-bottom: 30px;
+  padding-top: 10px;
 }
 
 .footer {
@@ -230,9 +246,10 @@ p {
 
 .banner {
   display: block;
-  width: 500px;
+  width: 90%;
   margin: 15px auto;
-  border: solid 3px white;
+  border: dotted 3px white;
+  border-radius: 15px;
 }
 
 /* MOBILE */
@@ -265,7 +282,7 @@ p {
     letter-spacing: 0px;
   }
   .nav-pipe {
-    margin: 0 15px;
+    margin: 0 10px;
   }
 
   .language-dropdown {
@@ -282,14 +299,30 @@ p {
   .about-us {
     width: 100%;
   }
-
+  .about-us-content {
+    padding: 30px 30px;
+  }
   .banner {
-    width: 75%;
+    width: 100%;
     margin: 15px auto;
   }
 }
 
 /* DESKTOP */
+
+@keyframes wonder-of-u-anim {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+    filter: grayscale(0);
+  }
+  100% {
+    opacity: 0.1;
+    filter: grayscale(1);
+  }
+}
 
 @media only screen and (min-width: 768px) {
   h1:before, h1:after {
@@ -304,6 +337,10 @@ p {
 
   .nav-buttons a:hover {
     color: yellow;
+  }
+
+  .jjbmc-logo:hover {
+    animation: wonder-of-u-anim 5s forwards;
   }
 }
 

@@ -4,6 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import { useState, useEffect } from 'react';
+import Markdown from 'react-markdown'
 
 // Scripts
 import { News } from "./news.js"
@@ -16,7 +17,8 @@ import "./styles/index.css";
 // Assets
 import logo         from "./assets/images/Logo.png";
 import logo_JP      from "./assets/images/Logo_JP.png"
-import banner       from "./assets/images/Banner.png";
+import wonder_of_u  from "./assets/images/Wonder_of_U.png";
+import banner       from "./assets/images/Long Banner.png";
 import { GetFlag }  from "./assets/flags.js";
 
 const UseDebounce = (callback, delay) => {
@@ -46,22 +48,22 @@ const text_content = {
       about: "about us"
     },
     content : {
-      about: "Since its original publication in 1987, <b>JoJo's Bizarre Adventure</b> has been the focus of many videogames from different studios and game engines. These games are a large talking point within the JoJo community, and we here at <b>JoJo's Bizarre Modding Community</b> find joy in harnessing our creativity to make these games even more fun to experience!<br/><br/>Our <b>mission</b> is to provide the resources, information, and assistance required for modders, old and new, to unleash their passions and ideas.<br/><br/>Primarily based on Discord, we have expanded to other platforms as well, hence the creation of this website to serve as a <b>portal</b> for JoJo modding things."
+      about: "**JoJo's Bizarre Adventure** has been the focus of various videogames, developed by different studios and in different game engines. For many, these games are a big part of their connection with the JoJo franchise, and we here at **JoJo's Bizarre Modding Community** seek to harness our creativity to make them even more fun to play and experience!\n\nOur **mission**  is to provide the resources, information, and guidance needed for modders, old and new, to successfully unleash their passionate crafts and ideas. Therefore, this website acts as a main **portal** for our community here online, and you can find us on **[Discord](https://discord.jojomodding.com)** where we are primarily based."
     }
   },
   spa : {
     navbar : {
       wiki: "wiki",
       roadmaps: "planos",
-      about: "quiénes somos",
+      about: "conócenos",
       top: "volver arriba"
     },
     headings : {
       mods: "mods",
-      about: "acerca de nosotros"
+      about: "sobre nosotros"
     },
     content : {
-      about: "Desde la publicación original en 1987, <b>JoJo's Bizarre Adventure</b> he sido el focus de muchos videojuegos de studios y game engines diferentes. These games are a large talking point within the JoJo community, and we here at <b>JoJo's Bizarre Modding Community</b> find joy in harnessing our creativity to make these games even more fun to experience!<br/><br/>Our <b>mission</b> is to provide the resources, information, and assistance required for modders, old and new, to unleash their passions and ideas.<br/><br/>Primarily based on Discord, we have expanded to other platforms as well, hence the creation of this website to serve as a <b>portal</b> for JoJo modding things."
+      about: ""
     }
   },
   jpn : {
@@ -76,7 +78,7 @@ const text_content = {
       about: "私ともとは"
     },
     content : {
-      about: "Since its original publication in 1987, <b>JoJo's Bizarre Adventure</b> has been the focus of many videogames from different studios and game engines. These games are a large talking point within the JoJo community, and we here at <b>JoJo's Bizarre Modding Community</b> find joy in harnessing our creativity to make these games even more fun to experience!<br/><br/>Our <b>mission</b> is to provide the resources, information, and assistance required for modders, old and new, to unleash their passions and ideas.<br/><br/>Primarily based on Discord, we have expanded to other platforms as well, hence the creation of this website to serve as a <b>portal</b> for JoJo modding things."
+      about: ""
     }
   }
 };
@@ -103,7 +105,9 @@ function Home({lang}) {
   const nav_pipe = <span className="nav-pipe">F</span>;
 
   function GrabText(group, target) {
-    return <span dangerouslySetInnerHTML={{ __html: text_content[lang][group][target]}}/>;
+    const text = text_content[lang][group][target];
+    if (text) return text;
+    return "[Error: missing text]";
   }
 
   function LanguageButton({lang_in, code, name}) {
@@ -124,12 +128,10 @@ function Home({lang}) {
             <div className="nav-buttons">
               <a href="https://wiki.jojomodding.com" target="_blank">{GrabText("navbar", "wiki")}</a>
               {nav_pipe}
-              <a href="https://jojomodding.miraheze.org/wiki/JoJo%27s_Bizarre_Modding_Wiki#tabber-Roadmaps" target="_blank">{GrabText("navbar", "roadmaps")}</a>
+              {/* <a href="https://jojomodding.miraheze.org/wiki/JoJo%27s_Bizarre_Modding_Wiki#tabber-Roadmaps" target="_blank">{GrabText("navbar", "roadmaps")}</a>
+              {nav_pipe} */}
+              <HashLink to={`${URLs[lang]}#about-us`}>{GrabText("navbar", "about")}</HashLink>
               {nav_pipe}
-              <span className="no-mobile">
-                <HashLink to={`${URLs[lang]}#about-us`}>{GrabText("navbar", "about")}</HashLink>
-                {nav_pipe}
-              </span>
               <div className="flag">
                 <div className="flag-overflow"><img src={GetFlag(lang)}/></div>
                 <div className="language-hitbox"></div>
@@ -144,6 +146,9 @@ function Home({lang}) {
 
           <News lang={lang}/>
 
+          <div className="wonder-of-u no-mobile">
+            <img src={wonder_of_u}/>
+          </div>
           <div className="jjbmc-logo">
             <img src={logo_image} alt="Logo"/>
           </div>
@@ -158,9 +163,11 @@ function Home({lang}) {
         </div> */}
 
         <div id="about-us" className="about-us">
-          <h1>{GrabText("headings", "about")}</h1>
-          <img className="banner" src={banner}></img>
-          <p>{GrabText("content", "about")}</p>
+          <div className="about-us-content">
+            <h1>{GrabText("headings", "about")}</h1>
+            <img className="banner" src={banner}></img>
+            <Markdown className="markdown">{GrabText("content", "about")}</Markdown>
+          </div>
         </div>
       </div>
 

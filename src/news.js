@@ -1,14 +1,17 @@
 import React from 'react';
-import { useState } from 'react';
+import { HashLink } from 'react-router-hash-link';
 
-import { mod } from "./utils.js"
-
-import backgrounds  from "./assets/backgrounds.js"
-import arrow        from "./assets/images/Arrow.png";
+import more         from "./assets/images/See More.png";
 import icons        from "./assets/icons.js"
 import thumbnails   from "./assets/thumbnails.js"
 
 import "./styles/news.css"
+
+const URLs = {
+    eng: "/",
+    spa: "/es",
+    jpn: "/jp"
+};
 
 const news_data = {
     "AsbrModdingComesToNintendoSwitch" : {
@@ -73,16 +76,29 @@ const news_data = {
     }
 };
 
-function Icon({link, name, color = "white", target = ""}) {
+const see_more = {
+    eng: ["see", "more"],
+    spa: ["leer", "más"],
+    jpn: ["もっと", "見る"]
+};
+
+function Icon({link, name, color = "white", target = "", lang}) {
     let text = name;
-    if (name == "NexusMods") text = "Mods";
+    if (name == "NexusMods") return (
+        <div className="icon" style={{background: `${color}`}}>
+            <HashLink to={`${URLs[lang]}#mod-pages`}>
+                <img src={icons[name]}/>
+                <p>Mods</p>
+            </HashLink>
+        </div>
+    );
     return (
-        <a href={link} target={target}>
-            <div className="icon" style={{background: `${color}`}}>
+        <div className="icon" style={{background: `${color}`}}>
+            <a href={link} target={target}>
                 <img src={icons[name]}/>
                 <p>{text}</p>
-            </div>
-        </a>
+            </a>
+        </div>
     );
 }  
 
@@ -107,20 +123,28 @@ export function News({lang}) {
 
     return (
         <>
-        <div className="icons">
-            <Icon link="https://discord.jojomodding.com" name="Discord" color="rgb(88, 101, 242)" target="_blank" />
-            <Icon link="https://twitter.jojomodding.com" name="Twitter" color="rgb(29, 155, 240)" target="_blank" />
-            <Icon link="https://youtube.jojomodding.com" name="YouTube" color="rgb(255, 0, 0)" target="_blank" />
-            <Icon link="#mod-pages" color="rgb(218, 142, 53)" name="NexusMods" />
-        </div>
-
         <div className="news-section">
         <div className="scrollbox">
             <Post id="AsbrModdingComesToNintendoSwitch"/>
             <Post id="UselessMaidLisaLisaCompetition"/>
             <Post id="UselessButlerCharacterCompetition"/>
             <Post id="Sofdec2Discoveries"/>
+
+            <div className="see-more">
+                <a className="see-more" href="https://jojomodding.miraheze.org/wiki/Template:Modding_Announcements" target="_blank">
+                    <img src={more}/>
+                    <p className="see-more-1">{see_more[lang][0]}</p>
+                    <p className="see-more-2">{see_more[lang][1]}</p>
+                </a>
+            </div>
         </div>
+        </div>
+
+        <div className="icons">
+            <Icon link="https://discord.jojomodding.com" name="Discord" color="rgb(88, 101, 242)" target="_blank" />
+            <Icon link="https://twitter.jojomodding.com" name="Twitter" color="rgb(29, 155, 240)" target="_blank" />
+            <Icon link="https://youtube.jojomodding.com" name="YouTube" color="rgb(255, 0, 0)" target="_blank" />
+            <Icon lang={lang} color="rgb(218, 142, 53)" name="NexusMods" />
         </div>
         </>
     );
