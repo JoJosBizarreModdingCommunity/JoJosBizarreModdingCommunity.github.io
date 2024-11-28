@@ -1,13 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.df1427df.css",
-    "main.js": "/static/js/main.6c72aae2.js",
+    "main.css": "/static/css/main.9c13698c.css",
+    "main.js": "/static/js/main.a339136f.js",
     "static/js/453.56bb96ee.chunk.js": "/static/js/453.56bb96ee.chunk.js",
     "static/media/yumindb.ttf": "/static/media/yumindb.605cf2d301f0dc1de7ce.ttf",
+    "static/media/Gen Jyuu Gothic Monospace Heavy.ttf": "/static/media/Gen Jyuu Gothic Monospace Heavy.f76d225b3f596c21270e.ttf",
     "static/media/UDDigiKyokashoN-R.ttc": "/static/media/UDDigiKyokashoN-R.1cbab35329ce9d4d66bd.ttc",
-    "static/media/Banner.png": "/static/media/Banner.e42c51c17621d0af1a75.png",
     "static/media/Useless_Maid's_Lisa_Lisa_competition.png": "/static/media/Useless_Maid's_Lisa_Lisa_competition.422cf952c97b0282afd8.png",
+    "static/media/ES.png": "/static/media/ES.1e82d27f24fea0f11e22.png",
+    "static/media/GB.png": "/static/media/GB.cd0eab427863a1672d40.png",
     "static/media/Useless_Butler's_character_competition.png": "/static/media/Useless_Butler's_character_competition.9635efab62f899b7bbe5.png",
+    "static/media/JP.png": "/static/media/JP.6c6917031e3cf3f79628.png",
+    "static/media/Long Banner.png": "/static/media/Long Banner.9643ec5a02d1c45f29bb.png",
     "static/media/Eyes_of_Heaven_Back.png": "/static/media/Eyes_of_Heaven_Back.2af338c86b0166ef4e4b.png",
     "static/media/All-Star_Battle_R_Back.png": "/static/media/All-Star_Battle_R_Back.bda366d4dfdb8f87aee2.png",
     "static/media/All-Star_Battle_Back.png": "/static/media/All-Star_Battle_Back.102145cd597713d465dc.png",
@@ -19,6 +23,7 @@
     "static/media/All-Star_Battle_Logo.png": "/static/media/All-Star_Battle_Logo.7b07f81fa5bf0064ab90.png",
     "static/media/Eyes_of_Heaven_Logo.png": "/static/media/Eyes_of_Heaven_Logo.8d2b28d96389271cce2b.png",
     "static/media/All-Star_Battle_R_Logo.png": "/static/media/All-Star_Battle_R_Logo.4d28aa2c685439b93a19.png",
+    "static/media/See More.png": "/static/media/See More.d71c682e983865aeb1c9.png",
     "static/media/RPCS3_Prop.png": "/static/media/RPCS3_Prop.63a500f00cb29950bfa7.png",
     "static/media/RPCS3_Back.png": "/static/media/RPCS3_Back.97780826a118b66f4744.png",
     "static/media/Starz 2.ttf": "/static/media/Starz 2.f2de2d44704f9e9b7261.ttf",
@@ -32,24 +37,21 @@
     "static/media/All-Star_Battle_R_Prop.png": "/static/media/All-Star_Battle_R_Prop.70d1bb194736ee9eb746.png",
     "static/media/Discord.png": "/static/media/Discord.a0252a0fda773fecb853.png",
     "static/media/KOMTXTB_.ttf": "/static/media/KOMTXTB_.1915673bb02959fc8e07.ttf",
+    "static/media/Wonder_of_U.png": "/static/media/Wonder_of_U.f9a881f5f18ac4fabc1e.png",
     "static/media/KOMTXT__.ttf": "/static/media/KOMTXT__.e5187234c8f73869edbc.ttf",
     "static/media/Twitter.png": "/static/media/Twitter.3e0766522ad03f87ee3b.png",
     "static/media/JoJoAPI_Logo.png": "/static/media/JoJoAPI_Logo.8f833d49dcc0892c1cdf.png",
     "static/media/basis33.regular.ttf": "/static/media/basis33.regular.2912cc5f2a34d2187f21.ttf",
-    "static/media/Arrow.png": "/static/media/Arrow.de2b216c974adfc2e0f0.png",
     "static/media/helsinki.ttf": "/static/media/helsinki.7f6ed50191e6bc8910f0.ttf",
     "static/media/Background.png": "/static/media/Background.2113c030176f78c5ecea.png",
     "static/media/YouTube.png": "/static/media/YouTube.c8f3e8f286c46725b712.png",
-    "static/media/GB.svg": "/static/media/GB.562cf2c8d2e3fbce8c313a109f6aa594.svg",
     "index.html": "/index.html",
-    "static/media/ES.svg": "/static/media/ES.ecfd591da524266c7eb965737c851f26.svg",
-    "static/media/JP.svg": "/static/media/JP.a83ddca67e702d15183fa7545f5981d9.svg",
-    "main.df1427df.css.map": "/static/css/main.df1427df.css.map",
-    "main.6c72aae2.js.map": "/static/js/main.6c72aae2.js.map",
+    "main.9c13698c.css.map": "/static/css/main.9c13698c.css.map",
+    "main.a339136f.js.map": "/static/js/main.a339136f.js.map",
     "453.56bb96ee.chunk.js.map": "/static/js/453.56bb96ee.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.df1427df.css",
-    "static/js/main.6c72aae2.js"
+    "static/css/main.9c13698c.css",
+    "static/js/main.a339136f.js"
   ]
 }
