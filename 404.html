@@ -2,10 +2,11 @@
 <html>
   <head>
     <script>
+      const redirectPath = location.pathname + location.search + location.hash;
       // Check if we're already at the root path to avoid infinite loops
-      if (location.pathname !== "/") {
+      if (location.pathname !== redirectPath) {
         // Redirect to the React app root
-        window.location.replace("/");
+        window.location.replace(redirectPath);
       }
     </script>
   </head>
