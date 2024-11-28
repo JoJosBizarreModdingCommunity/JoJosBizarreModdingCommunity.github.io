@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.60e1bf39.css",
-    "main.js": "/static/js/main.543b96fc.js",
+    "main.css": "/static/css/main.df1427df.css",
+    "main.js": "/static/js/main.b39ad612.js",
     "static/js/453.56bb96ee.chunk.js": "/static/js/453.56bb96ee.chunk.js",
+    "static/media/yumindb.ttf": "/static/media/yumindb.605cf2d301f0dc1de7ce.ttf",
     "static/media/UDDigiKyokashoN-R.ttc": "/static/media/UDDigiKyokashoN-R.1cbab35329ce9d4d66bd.ttc",
     "static/media/Banner.png": "/static/media/Banner.e42c51c17621d0af1a75.png",
     "static/media/Useless_Maid's_Lisa_Lisa_competition.png": "/static/media/Useless_Maid's_Lisa_Lisa_competition.422cf952c97b0282afd8.png",
@@ -13,6 +14,7 @@
     "static/media/Logo.png": "/static/media/Logo.b6cff79db53c268772d3.png",
     "static/media/Sofdec2_discoveries.png": "/static/media/Sofdec2_discoveries.3d622ff2ffca4623eab9.png",
     "static/media/ASBR_modding_comes_to_Nintendo_Switch.png": "/static/media/ASBR_modding_comes_to_Nintendo_Switch.fad095029dce35c63616.png",
+    "static/media/Logo_JP.png": "/static/media/Logo_JP.1ecc85cf36d4f6fa91e8.png",
     "static/media/Eyes_of_Heaven_Prop.png": "/static/media/Eyes_of_Heaven_Prop.67278da7c68e4ff99480.png",
     "static/media/All-Star_Battle_Logo.png": "/static/media/All-Star_Battle_Logo.7b07f81fa5bf0064ab90.png",
     "static/media/Eyes_of_Heaven_Logo.png": "/static/media/Eyes_of_Heaven_Logo.8d2b28d96389271cce2b.png",
@@ -42,12 +44,12 @@
     "index.html": "/index.html",
     "static/media/ES.svg": "/static/media/ES.ecfd591da524266c7eb965737c851f26.svg",
     "static/media/JP.svg": "/static/media/JP.a83ddca67e702d15183fa7545f5981d9.svg",
-    "main.60e1bf39.css.map": "/static/css/main.60e1bf39.css.map",
-    "main.543b96fc.js.map": "/static/js/main.543b96fc.js.map",
+    "main.df1427df.css.map": "/static/css/main.df1427df.css.map",
+    "main.b39ad612.js.map": "/static/js/main.b39ad612.js.map",
     "453.56bb96ee.chunk.js.map": "/static/js/453.56bb96ee.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.60e1bf39.css",
-    "static/js/main.543b96fc.js"
+    "static/css/main.df1427df.css",
+    "static/js/main.b39ad612.js"
   ]
 }
