@@ -2,9 +2,11 @@
 <html>
   <head>
     <script>
-      // Redirect to the React Router app while preserving the original path
-      const redirect = location.pathname + location.search + location.hash;
-      window.location.replace(`${location.origin}${redirect}`);
+      // Check if we're already at the root path to avoid infinite loops
+      if (location.pathname !== "/") {
+        // Redirect to the React app root
+        window.location.replace("/");
+      }
     </script>
   </head>
   <body></body>
