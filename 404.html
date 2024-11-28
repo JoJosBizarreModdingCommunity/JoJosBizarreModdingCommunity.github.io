@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta http-equiv="refresh" content="0; URL=./" />
-</head>
+  <head>
+    <script>
+      // Redirect to the React Router app while preserving the original path
+      const redirect = location.pathname + location.search + location.hash;
+      window.location.replace(`${location.origin}${redirect}`);
+    </script>
+  </head>
+  <body></body>
 </html>
