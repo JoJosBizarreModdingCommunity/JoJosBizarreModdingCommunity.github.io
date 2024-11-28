@@ -13,10 +13,10 @@ function Game({link, name}) {
     );
 }
 
-export function Games() {
+export function Games({heading}) {
     return (
         <div id="mod-pages" className="mod-pages">
-          <h1>Mods</h1>
+          <h1>{heading}</h1>
           <div className="games">
             <div className="horizontal-scroll">
                 <div className="game-column">

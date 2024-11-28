@@ -29,7 +29,7 @@
     margin-right: 25px;
     color: white;
     font-size: 40px;
-    font-family: "Helsinki";
+    font-family: "Helsinki", "Yu Mincho", arial;
 }
 
 :root {
@@ -91,7 +91,7 @@
     bottom: 14px;
     padding: 0 20px;
     color: white;
-    font-family: "Komika", sans-serif;
+    font-family: "Komika", "Digi Kyokasho", sans-serif;
     font-size: 25px;
     text-align: left;
     transition: 0.2s;
@@ -130,19 +130,6 @@
 
 /* MOBILE ONLY */
 @media only screen and (max-width: 768px) {
-    .jjbmc-logo {
-        position: absolute;
-        top: 30px;
-        left: 10;
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        pointer-events: none;
-    }
-    .jjbmc-logo img {
-        width: 350px;
-    }
-
     :root {
         --news-height: 150px;
     }

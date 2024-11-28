@@ -22,7 +22,8 @@ const news_data = {
         },
         desc: {
             eng: "We've seen a massive breakthrough for ASBR players on Nintendo Switch...",
-            spa: "Hemos visto un gran avance para los jugadores de ASBR en Nintendo Switch..."
+            spa: "Hemos visto un gran avance para los jugadores de ASBR en Nintendo Switch...",
+            jpn: "私たちはNintendo SwitchのASBRプレイヤーにとって大きなディスカバリーを見られました！"
         }
     },
     "UselessMaidLisaLisaCompetition" : {
@@ -36,7 +37,8 @@ const news_data = {
         },
         desc: {
             eng: "Previously seldom modded, we held a Lisa Lisa texture competition, funded by Useless Maid...",
-            spa: "Organizamos un concurso de texturas para la Lisa Lisa solitaria, financiado por Useless Maid..."
+            spa: "Organizamos un concurso de texturas para la Lisa Lisa solitaria, financiado por Useless Maid...",
+            jpn: "[TBA]"
         }
     },
     "UselessButlerCharacterCompetition" : {
@@ -50,7 +52,8 @@ const news_data = {
         },
         desc: {
             eng: "Useless Butler started a character model competition with 5 remarkable submissions...",
-            spa: "Useless Butler inició una competencia de modelos, y hay 5 presentaciones geniales..."
+            spa: "Useless Butler inició una competencia de modelos, y hay 5 presentaciones geniales...",
+            jpn: "[TBA]"
         }
     },
     "Sofdec2Discoveries" : {
@@ -64,7 +67,8 @@ const news_data = {
         },
         desc: {
             eng: "Sofdec2 USM modding has been made easier than ever thanks to our discovery of various tools...",
-            spa: "El modding de Sofdec2 se ha hecho súper fácil gracias al descubrimiento de varias herramientas..."
+            spa: "El modding de Sofdec2 se ha hecho súper fácil gracias al descubrimiento de varias herramientas...",
+            jpn: "[TBA]"
         }
     }
 };

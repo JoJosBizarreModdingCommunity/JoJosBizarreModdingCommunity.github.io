@@ -13,7 +13,8 @@ import "./assets/fonts.css";
 import "./styles/index.css";
 
 // Assets
-import logo         from './assets/images/Logo.png';
+import logo         from "./assets/images/Logo.png";
+import logo_JP      from "./assets/images/Logo_JP.png"
 import banner       from "./assets/images/Banner.png";
 import { GetFlag }  from "./assets/flags.js";
 
@@ -55,6 +56,21 @@ const text_content = {
     content : {
       about: "Desde la publicación original en 1987, <b>JoJo's Bizarre Adventure</b> he sido el focus de muchos videojuegos de studios y game engines diferentes. These games are a large talking point within the JoJo community, and we here at <b>JoJo's Bizarre Modding Community</b> find joy in harnessing our creativity to make these games even more fun to experience!<br/><br/>Our <b>mission</b> is to provide the resources, information, and assistance required for modders, old and new, to unleash their passions and ideas.<br/><br/>Primarily based on Discord, we have expanded to other platforms as well, hence the creation of this website to serve as a <b>portal</b> for JoJo modding things."
     }
+  },
+  jpn : {
+    navbar : {
+      wiki: "wiki",
+      roadmaps: "四計",
+      about: "私ともとは",
+      top: "トップへ戻る"
+    },
+    headings : {
+      mods: "mod",
+      about: "私ともとは"
+    },
+    content : {
+      about: "Since its original publication in 1987, <b>JoJo's Bizarre Adventure</b> has been the focus of many videogames from different studios and game engines. These games are a large talking point within the JoJo community, and we here at <b>JoJo's Bizarre Modding Community</b> find joy in harnessing our creativity to make these games even more fun to experience!<br/><br/>Our <b>mission</b> is to provide the resources, information, and assistance required for modders, old and new, to unleash their passions and ideas.<br/><br/>Primarily based on Discord, we have expanded to other platforms as well, hence the creation of this website to serve as a <b>portal</b> for JoJo modding things."
+    }
   }
 };
 
@@ -89,6 +105,9 @@ function Home({lang}) {
     }
   }
 
+  var logo_image = logo;
+  if (lang == "jpn") logo_image = logo_JP;
+
   return (
     <>
       <div className="bg-container">
@@ -100,8 +119,10 @@ function Home({lang}) {
               {nav_pipe}
               <a href="https://jojomodding.miraheze.org/wiki/JoJo%27s_Bizarre_Modding_Wiki#tabber-Roadmaps" target="_blank">{GrabText("navbar", "roadmaps")}</a>
               {nav_pipe}
-              <a href="#about-us">{GrabText("navbar", "about")}</a>
-              {nav_pipe}
+              <span className="no-mobile">
+                <a href="#about-us">{GrabText("navbar", "about")}</a>
+                {nav_pipe}
+              </span>
               <div className="flag">
                 <div className="flag-overflow"><img src={GetFlag(lang)}/></div>
                 <div className="language-hitbox"></div>
@@ -117,13 +138,13 @@ function Home({lang}) {
           <News lang={lang}/>
 
           <div className="jjbmc-logo">
-            <img src={logo} alt="Logo"/>
+            <img src={logo_image} alt="Logo"/>
           </div>
       </div>
 
       <div className="border"></div>
       <div className="underneath">
-        <Games/>
+        <Games heading={GrabText("headings", "mods")}/>
 
         {/* <div id="roadmaps">
           <h1>Roadmaps</h1>
@@ -147,6 +168,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home lang="eng"/>} />
         <Route path="/es" element={<Home lang="spa"/>} />
+        <Route path="/jp" element={<Home lang="jpn"/>} />
         <Route path="*" element={<><p>Error 404: This page does not exist.</p><br/><a href="/">Go back!</a></>}/>
       </Routes>
     </Router>

@@ -30,3 +30,7 @@
     font-family: "Digi Kyokasho";
     src: url("./fonts/UDDigiKyokashoN-R.ttc") format("truetype");
 }
+@font-face {
+    font-family: "Yu Mincho";
+    src: local("Yu Mincho"), url("./fonts/yumindb.ttf") format("truetype");
+}
