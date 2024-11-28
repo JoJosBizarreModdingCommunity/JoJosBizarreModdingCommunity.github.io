@@ -1,4 +1,5 @@
 import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
@@ -24,6 +25,12 @@ const UseDebounce = (callback, delay) => {
     clearTimeout(timeout);
     timeout = setTimeout(() => callback(...args), delay);
   };
+};
+
+const URLs = {
+  eng: "/",
+  spa: "/es",
+  jpn: "/jp"
 };
 
 const text_content = {
@@ -120,7 +127,7 @@ function Home({lang}) {
               <a href="https://jojomodding.miraheze.org/wiki/JoJo%27s_Bizarre_Modding_Wiki#tabber-Roadmaps" target="_blank">{GrabText("navbar", "roadmaps")}</a>
               {nav_pipe}
               <span className="no-mobile">
-                <a href="#about-us">{GrabText("navbar", "about")}</a>
+                <HashLink to={`${URLs[lang]}#about-us`}>{GrabText("navbar", "about")}</HashLink>
                 {nav_pipe}
               </span>
               <div className="flag">
@@ -157,7 +164,7 @@ function Home({lang}) {
         </div>
       </div>
 
-      <div className={`footer ${showFooter ? 'visible' : 'hidden'}`}><a href="#top">{GrabText("navbar", "top")}</a></div>
+      <div className={`footer ${showFooter ? 'visible' : 'hidden'}`}><HashLink to={`${URLs[lang]}#top`}>{GrabText("navbar", "top")}</HashLink></div>
     </>
   );
 }
