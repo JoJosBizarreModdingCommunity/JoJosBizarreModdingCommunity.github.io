@@ -11,6 +11,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   overflow-x: visible; /* Stop background animation from creating horizontal scroll. */
+  background-color: black;
 }
 
 code {
@@ -258,7 +259,7 @@ p {
   .bg-container {
     height: 660px;
   }
-  
+
   .jjbmc-logo {
     position: absolute;
     top: 65px;
