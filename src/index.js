@@ -129,8 +129,6 @@ function Home({lang}) {
             <div className="nav-buttons">
               <a href="https://wiki.jojomodding.com" target="_blank">{GrabText("navbar", "wiki")}</a>
               {nav_pipe}
-              {/* <a href="https://jojomodding.miraheze.org/wiki/JoJo%27s_Bizarre_Modding_Wiki#tabber-Roadmaps" target="_blank">{GrabText("navbar", "roadmaps")}</a>
-              {nav_pipe} */}
               <HashLink to={`${URLs[lang]}#about-us`}>{GrabText("navbar", "about")}</HashLink>
               {nav_pipe}
               <div className="flag">
@@ -158,10 +156,6 @@ function Home({lang}) {
       <div className="border"></div>
       <div className="underneath">
         <Games heading={GrabText("headings", "mods")}/>
-
-        {/* <div id="roadmaps">
-          <h1>Roadmaps</h1>
-        </div> */}
 
         <div id="about-us" className="about-us">
           <div className="about-us-content">

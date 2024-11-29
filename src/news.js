@@ -125,17 +125,19 @@ export function News({lang}) {
         <>
         <div className="news-section">
         <div className="scrollbox">
-            <Post id="AsbrModdingComesToNintendoSwitch"/>
-            <Post id="UselessMaidLisaLisaCompetition"/>
-            <Post id="UselessButlerCharacterCompetition"/>
-            <Post id="Sofdec2Discoveries"/>
+            <div className="news-container">
+                <Post id="AsbrModdingComesToNintendoSwitch"/>
+                <Post id="UselessMaidLisaLisaCompetition"/>
+                <Post id="UselessButlerCharacterCompetition"/>
+                <Post id="Sofdec2Discoveries"/>
 
-            <div className="see-more">
-                <a className="see-more" href="https://jojomodding.miraheze.org/wiki/Template:Modding_Announcements" target="_blank">
-                    <img src={more}/>
-                    <p className="see-more-1">{see_more[lang][0]}</p>
-                    <p className="see-more-2">{see_more[lang][1]}</p>
-                </a>
+                <div className="see-more">
+                    <a className="see-more" href="https://jojomodding.miraheze.org/wiki/Template:Modding_Announcements" target="_blank">
+                        <img src={more}/>
+                        <p className="see-more-1">{see_more[lang][0]}</p>
+                        <p className="see-more-2">{see_more[lang][1]}</p>
+                    </a>
+                </div>
             </div>
         </div>
         </div>
