@@ -213,6 +213,7 @@
         aspect-ratio: 1 / 1;
         width: 18dvw;
         height: auto;
+        display: inline-flex;
         align-items: center;
     }
     .icon p {
