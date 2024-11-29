@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.d69001de.css",
-    "main.js": "/static/js/main.7df11821.js",
+    "main.css": "/static/css/main.11544501.css",
+    "main.js": "/static/js/main.131e5855.js",
     "static/js/453.56bb96ee.chunk.js": "/static/js/453.56bb96ee.chunk.js",
     "static/media/yumindb.ttf": "/static/media/yumindb.605cf2d301f0dc1de7ce.ttf",
     "static/media/Gen Jyuu Gothic Monospace Heavy.ttf": "/static/media/Gen Jyuu Gothic Monospace Heavy.f76d225b3f596c21270e.ttf",
     "static/media/UDDigiKyokashoN-R.ttc": "/static/media/UDDigiKyokashoN-R.1cbab35329ce9d4d66bd.ttc",
+    "static/media/Banner.png": "/static/media/Banner.e42c51c17621d0af1a75.png",
     "static/media/Useless_Maid's_Lisa_Lisa_competition.png": "/static/media/Useless_Maid's_Lisa_Lisa_competition.422cf952c97b0282afd8.png",
     "static/media/ES.png": "/static/media/ES.1e82d27f24fea0f11e22.png",
     "static/media/GB.png": "/static/media/GB.cd0eab427863a1672d40.png",
@@ -46,12 +47,12 @@
     "static/media/Background.png": "/static/media/Background.2113c030176f78c5ecea.png",
     "static/media/YouTube.png": "/static/media/YouTube.c8f3e8f286c46725b712.png",
     "index.html": "/index.html",
-    "main.d69001de.css.map": "/static/css/main.d69001de.css.map",
-    "main.7df11821.js.map": "/static/js/main.7df11821.js.map",
+    "main.11544501.css.map": "/static/css/main.11544501.css.map",
+    "main.131e5855.js.map": "/static/js/main.131e5855.js.map",
     "453.56bb96ee.chunk.js.map": "/static/js/453.56bb96ee.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d69001de.css",
-    "static/js/main.7df11821.js"
+    "static/css/main.11544501.css",
+    "static/js/main.131e5855.js"
   ]
 }
