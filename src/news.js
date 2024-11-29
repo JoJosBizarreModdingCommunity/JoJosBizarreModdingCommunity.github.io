@@ -14,6 +14,21 @@ const URLs = {
 };
 
 const news_data = {
+    "NewWebsiteLaunch" : {
+        media: thumbnails["NewWebsiteLaunch"],
+        type: "image",
+        link: "https://jojomodding.miraheze.org/wiki/News:JoJo_Modding_Website",
+        date: {
+            year: 2024,
+            month: 11,
+            day: 29
+        },
+        desc: {
+            eng: "We're proud to announce the launch of our new website at jojomodding.com, our official portal!",
+            spa: "¡Estamos orgullosos de anunciar el inicio de nuestra web nueva a jojomodding.com, nuestro portal oficial!",
+            jpn: ""
+        }
+    },
     "AsbrModdingComesToNintendoSwitch" : {
         media: thumbnails["AsbrModdingComesToNintendoSwitch"],
         type: "image",
@@ -126,6 +141,7 @@ export function News({lang}) {
         <div className="news-section">
         <div className="scrollbox">
             <div className="news-container">
+                <Post id="NewWebsiteLaunch"/>
                 <Post id="AsbrModdingComesToNintendoSwitch"/>
                 <Post id="UselessMaidLisaLisaCompetition"/>
                 <Post id="UselessButlerCharacterCompetition"/>
