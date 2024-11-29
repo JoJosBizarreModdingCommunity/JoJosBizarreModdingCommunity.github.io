@@ -48,7 +48,7 @@ const text_content = {
       about: "about us"
     },
     content : {
-      about: "**JoJo's Bizarre Adventure** has been the focus of various videogames, developed by different studios and in different game engines. For many, these games are a big part of their connection with the JoJo franchise, and we here at **JoJo's Bizarre Modding Community** seek to harness our creativity to make them even more fun to play and experience!\n\nOur **mission**  is to provide the resources, information, and guidance needed for modders, old and new, to successfully unleash their passionate crafts and ideas. Therefore, this website acts as a main **portal** for our community here online, and you can find us on **[Discord](https://discord.jojomodding.com)** where we are primarily based."
+      about: "**JoJo's Bizarre Adventure** has been the focus of various videogames, developed by different studios and in different game engines. For many, these games are a big part of their connection with the JoJo franchise, and we here at **JoJo's Bizarre Modding Community** seek to harness our creativity to make them even more fun to play and experience!\n\nOur **mission** is to provide the resources, information, and guidance needed for modders, old and new, to successfully unleash their passionate crafts and ideas. Therefore, this website acts as a main **portal** for our community here online, and you can find us on **[Discord](https://discord.jojomodding.com)** where we are primarily based."
     }
   },
   spa : {
@@ -63,7 +63,7 @@ const text_content = {
       about: "sobre nosotros"
     },
     content : {
-      about: ""
+      about: "**JoJo's Bizarre Adventure** he sido el foco de varios videojuegos, creado por estudios diferentes y en motores diferentes de videojuegos. Para mucha gente, estes videojuegos son un gran parte de su coneción con el franquicia de JoJo, ¡y aquí en **JoJo's Bizarre Modding Community** nos esforzamos emplear nuestra creatividad para hacer que jugar y disfrutar aún mas divertido!\n\nLa meta de nuestra comunidad es proveer los recursos, la información y las guías necesarias entonces los modders, experimentados y nuevos, pueden realizar con éxito sus creaciones y ideas apasionadas. Por lo tanto, este sitio web es el **portal** principal para nuestra comunidad aquí en línea, y puedes encontrarnos donde estamos ubicados en **[Discord](https://discord.jojomodding.com)**."
     }
   },
   jpn : {
@@ -138,7 +138,7 @@ function Home({lang}) {
                 <div className="language-dropdown">
                   <LanguageButton lang_in="eng" code="" name="English"/>
                   <LanguageButton lang_in="spa" code="es" name="español"/>
-                  <LanguageButton lang_in="jpn" code="jp" name="日本語"/>
+                  {/* <LanguageButton lang_in="jpn" code="jp" name="日本語"/> */}
                 </div>
               </div>
             </div>
