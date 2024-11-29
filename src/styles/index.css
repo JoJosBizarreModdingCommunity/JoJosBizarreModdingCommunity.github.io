@@ -59,7 +59,7 @@ p {
   z-index: -1;
   background: linear-gradient(to bottom, rgba(238, 255, 1, 0.02), rgba(11, 25, 41, 0.73)), url("../assets/images/backgrounds/Background.png") repeat;
   background-size: 150px;
-  height: 100vh;
+  height: 100%;
   width: 5076px;
   animation: slide 60s linear infinite;
 }
@@ -255,6 +255,10 @@ p {
 /* MOBILE */
 
 @media only screen and (max-width: 768px) {
+  .bg-container {
+    height: 660px;
+  }
+  
   .jjbmc-logo {
     position: absolute;
     top: 65px;
