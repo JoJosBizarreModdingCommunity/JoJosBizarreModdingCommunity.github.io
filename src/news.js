@@ -144,9 +144,10 @@ export function News({lang}) {
 
         <div className="icons">
             <Icon link="https://discord.jojomodding.com" name="Discord" color="rgb(88, 101, 242)" target="_blank" />
-            <Icon link="https://twitter.jojomodding.com" name="Twitter" color="rgb(29, 155, 240)" target="_blank" />
-            <Icon link="https://youtube.jojomodding.com" name="YouTube" color="rgb(255, 0, 0)" target="_blank" />
             <Icon lang={lang} color="rgb(218, 142, 53)" name="NexusMods" />
+            <Icon link="https://twitter.jojomodding.com" name="Twitter" color="rgb(29, 155, 240)" target="_blank" />
+            <Icon link="https://bsky.app/profile/jojomodding.bsky.social" name="Bluesky" color="rgb(17, 133, 254)" target="_blank" />
+            <Icon link="https://youtube.jojomodding.com" name="YouTube" color="rgb(255, 0, 0)" target="_blank" />
         </div>
         </>
     );
