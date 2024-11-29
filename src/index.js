@@ -18,7 +18,8 @@ import "./styles/index.css";
 import logo         from "./assets/images/Logo.png";
 import logo_JP      from "./assets/images/Logo_JP.png"
 import wonder_of_u  from "./assets/images/Wonder_of_U.png";
-import banner       from "./assets/images/Long Banner.png";
+import banner       from "./assets/images/Banner.png";
+import banner_long  from "./assets/images/Long Banner.png";
 import { GetFlag }  from "./assets/flags.js";
 
 const UseDebounce = (callback, delay) => {
@@ -165,7 +166,8 @@ function Home({lang}) {
         <div id="about-us" className="about-us">
           <div className="about-us-content">
             <h1>{GrabText("headings", "about")}</h1>
-            <img className="banner" src={banner}></img>
+            <img className="banner only-mobile" src={banner}></img>
+            <img className="banner no-mobile" src={banner_long}></img>
             <Markdown className="markdown">{GrabText("content", "about")}</Markdown>
           </div>
         </div>

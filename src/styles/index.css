@@ -330,6 +330,10 @@ p {
 }
 
 @media only screen and (min-width: 768px) {
+  .only-mobile {
+    display: none;
+  }
+
   h1:before, h1:after {
     font-family: "Starz";
     content: "F";
