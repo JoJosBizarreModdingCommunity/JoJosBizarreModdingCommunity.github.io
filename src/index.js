@@ -64,7 +64,7 @@ const text_content = {
       about: "sobre nosotros"
     },
     content : {
-      about: "**JoJo's Bizarre Adventure** ha sido el foco de varios videojuegos, creados por varios estudios diferentes y en motores diferentes de videojuegos. Para mucha gente, estos videojuegos son una gran parte de su conexión con la franquicia de JoJo, ¡y aquí en **JoJo's Bizarre Modding Community** nos esforzamos  por emplear al maximo nuestra creatividad para hacer que jugar y disfrutar sea aún mas divertido!\n\nLa meta de nuestra comunidad es proveer los recursos, la información y las guías necesarias para que todos los modders, experimentados y nuevos, pueden realizar con éxito sus creaciones e ideas apasionadas. Por lo tanto, este sitio web es el portal principal para nuestra comunidad en línea, y puedes encontrarnos en **[Discord](https://discord.jojomodding.com)**."
+      about: "**JoJo's Bizarre Adventure** ha sido el foco de varios videojuegos, creados por diferentes estudios con distintos motores de videojuegos. Para mucha gente, estos videojuegos son una gran parte de su conexión con la franquicia de JoJo, ¡y aquí en **JoJo's Bizarre Modding Community** deseamos emplear al maximo nuestra creatividad para hacer que estos juegos sean aún mas divertidos para jugar!\n\nLa meta de nuestra comunidad es proveer los recursos, la información y las guías necesarias para que todos los modders, experimentados y nuevos, puedan realizar con éxito sus creaciones e ideas apasionadas. Por lo tanto, este sitio web es el portal principal para nuestra comunidad en línea, y también nos pueden encontrar en **[Discord](https://discord.jojomodding.com)**, donde nos encontramos principalmente."
     }
   },
   jpn : {
