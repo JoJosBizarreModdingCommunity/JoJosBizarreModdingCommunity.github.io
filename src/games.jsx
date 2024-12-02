@@ -1,5 +1,5 @@
 import "./styles/games.css";
-import game_art from "./assets/game_art.js"
+import game_art from "./assets/game_art.jsx"
 
 function Game({link, name}) {
     return (

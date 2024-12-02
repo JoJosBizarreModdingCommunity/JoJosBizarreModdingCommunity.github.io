@@ -163,8 +163,8 @@ p {
   left: 50%;
   right: 50%;
   top: 135%;
-  transform: translateX(-50%);
-  width: 350%;
+  transform: translateX(-55%);
+  width: 380%;
   height: auto;
   padding-bottom: 10px;
   background-color: rgba(0, 0, 0, 0.9);
@@ -291,7 +291,7 @@ p {
   }
 
   .language-dropdown {
-    width: 300%;
+    width: 350%;
     left: -20%;
     height: auto;
     font-size: 25px;
