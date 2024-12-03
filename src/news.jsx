@@ -27,6 +27,7 @@ const news_data = {
             "en":     strings["en"].news.NewWebsiteLaunch,
             "es":     strings["es"].news.NewWebsiteLaunch,
             "pt-br":  strings["pt-br"].news.NewWebsiteLaunch,
+            "sv":     strings["sv"].news.NewWebsiteLaunch,
             "ja":     strings["ja"].news.NewWebsiteLaunch
         }
     },
@@ -48,6 +49,7 @@ const news_data = {
             "en":     strings["en"].news.AsbrModdingComesToNintendoSwitch,
             "es":     strings["es"].news.AsbrModdingComesToNintendoSwitch,
             "pt-br":  strings["pt-br"].news.AsbrModdingComesToNintendoSwitch,
+            "sv":     strings["sv"].news.AsbrModdingComesToNintendoSwitch,
             "ja":     strings["ja"].news.AsbrModdingComesToNintendoSwitch
         }
     },
@@ -69,6 +71,7 @@ const news_data = {
             "en":     strings["en"].news.UselessMaidLisaLisaCompetition,
             "es":     strings["es"].news.UselessMaidLisaLisaCompetition,
             "pt-br":  strings["pt-br"].news.UselessMaidLisaLisaCompetition,
+            "sv":     strings["sv"].news.UselessMaidLisaLisaCompetition,
             "ja":     strings["ja"].news.UselessMaidLisaLisaCompetition
         }
     },
@@ -90,6 +93,7 @@ const news_data = {
             "en":     strings["en"].news.UselessButlerCharacterCompetition,
             "es":     strings["es"].news.UselessButlerCharacterCompetition,
             "pt-br":  strings["pt-br"].news.UselessButlerCharacterCompetition,
+            "sv":     strings["sv"].news.UselessButlerCharacterCompetition,
             "ja":     strings["ja"].news.UselessButlerCharacterCompetition
         }
     },
@@ -111,6 +115,7 @@ const news_data = {
             "en":     strings["en"].news.Sofdec2Discoveries,
             "es":     strings["es"].news.Sofdec2Discoveries,
             "pt-br":  strings["pt-br"].news.Sofdec2Discoveries,
+            "sv":     strings["sv"].news.Sofdec2Discoveries,
             "ja":     strings["ja"].news.Sofdec2Discoveries
         }
     }
