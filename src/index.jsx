@@ -91,6 +91,7 @@ function Home({lang}) {
                   <LanguageButton code="es" name="español"/>
                   <LanguageButton code="pt-br" name="português brasileiro"/>
                   <LanguageButton code="sv" name="svenska"/>
+                  <LanguageButton code="pl" name="polski"/>
                   {/* <LanguageButton code="ja" name="日本語"/> */}
                 </div>
               </div>
@@ -134,6 +135,7 @@ function App() {
         <Route path={strings["es"].url} element={<Home lang="es"/>} />
         <Route path={strings["pt-br"].url} element={<Home lang="pt-br"/>} />
         <Route path={strings["sv"].url} element={<Home lang="sv"/>} />
+        <Route path={strings["pl"].url} element={<Home lang="pl"/>} />
         <Route path={strings["ja"].url} element={<Home lang="ja"/>} />
         <Route path="*" element={<><p>Error 404: This page does not exist.</p><br/><a href="/">Go back!</a></>}/>
       </Routes>

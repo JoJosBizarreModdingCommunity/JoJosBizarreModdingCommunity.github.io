@@ -91,6 +91,29 @@ const strings = {
         },
         about: "**JoJo's Bizarre Adventure** har varit focus av flera olika tv-spel gjort av flera studios och olika spelmotorer. För många, Är dom här spelen en stor del av deras anslutnig till JoJo franchise, Och vi här **JoJo's Bizarre Modding Community** Söker utnyttjan av våran Kreativitet för att göra dom mer roligare att spela och uppleva!\n\nVårt **Mål** är att ge resurser och info och vägleding för moddare, Gamla Och Nya, att dom ska lyckas släppa lös sitt passionerade hantverk och idéer. Därför fungerar den här webbplatsen som en huvud plats **portal** för vår community här online, och du kan hitta oss på **[Discord](https://discord.jojomodding.com)** Där vi i första hand är baserade.  "
     },
+    "pl": {
+        url: "/pl",
+        navbar: {
+            wiki: "wiki",
+            roadmaps: "roadmapy",
+            about: "o nas",
+            top: "powrót na początek"
+        },
+        headings: {
+            mods: "mody",
+            about: "o nas"
+        },
+        news: {
+            see: "zobacz",
+            more: "więcej",
+            NewWebsiteLaunch: "Z dumą ogłaszamy uruchomienie naszej nowej strony pod adresem jojomodding.com, naszego oficjalnego portalu!",
+            AsbrModdingComesToNintendoSwitch: "Ogromny przełom dla graczy ASBR na Nintendo Switch...",
+            UselessMaidLisaLisaCompetition: "Wcześniej rzadko modyfikowana, zorganizowaliśmy konkurs tekstur do Lisy Lisy, sfinansowany przez Useless Maid...",
+            UselessButlerCharacterCompetition: "Useless Butler rozpoczął konkurs modeli postaci z 5 znakomitymi zgłoszeniami...",
+            Sofdec2Discoveries: "Modowanie Sofdec2 USM stało się łatwiejsze niż kiedykolwiek dzięki naszym odkryciom różnych narzędzi..."
+        },
+        about: "**JoJo's Bizarre Adventure** był obiektem różnych gier wideo, opracowanych przez różne studia i w różnych silnikach gier. Dla wielu osób te gry stanowią dużą część ich związku z franczyzą JoJo, a my **JoJo's Bizarre Modding Community** chcemy wykorzystać naszą kreatywność, aby uczynić je jeszcze lepszymi!\n\nNasza **misja** polega na dostarczeniu zasobów, informacji i wskazówek potrzebnych modderom, zarówno doświadczonym, jak i nowym, aby z powodzeniem mogli uwolnić swoje pasjonujące rzemiosła i pomysły. Dlatego ta strona internetowa pełni rolę głównego **portalu** dla naszej społeczności online, a nas można znaleźć na **[Discord](https://discord.jojomodding.com)**, gdzie głównie się znajdujemy."
+    },
     "ja": {
         url: "/ja",
         navbar: {
