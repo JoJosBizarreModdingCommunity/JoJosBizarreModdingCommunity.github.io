@@ -9,6 +9,29 @@ import thumbnails   from "./assets/thumbnails.jsx"
 import "./styles/news.css"
 
 const news_data = {
+    "Japi310" : {
+        media: thumbnails["Japi310"],
+        type: "image",
+        link: "https://jojomodding.miraheze.org/wiki/News:JAPI_v3.1.0",
+        translated: {
+            "es": false,
+            "pt-br": false,
+            "ja": false
+        },
+        date: {
+            year: 2025,
+            month: 1,
+            day: 13
+        },
+        desc: {
+            "en":     strings["en"].news.Japi310,
+            "es":     strings["es"].news.Japi310,
+            "pt-br":  strings["pt-br"].news.Japi310,
+            "sv":     strings["sv"].news.Japi310,
+            "pl":     strings["pl"].news.Japi310,
+            "ja":     strings["ja"].news.Japi310
+        }
+    },
     "NewWebsiteLaunch" : {
         media: thumbnails["NewWebsiteLaunch"],
         type: "image",
@@ -160,6 +183,10 @@ export function News({lang}) {
         if (data.translated[lang] == true) 
             link += `/${lang}`;
 
+        var desc = data.desc[lang];
+        if (desc == null)
+            desc = "[translation needed]"; // strings[lang].translation_needed;
+
         return (
             <a className="news-post" href={link} target="_blank">
             <div className="news-post">
@@ -168,7 +195,7 @@ export function News({lang}) {
                 <p className="news-date">
                     {data.date.year}.{String(data.date.month).padStart(2, '0')}.{String(data.date.day).padStart(2, '0')}
                 </p>
-                <p className="news-desc">{data.desc[lang]}</p>
+                <p className="news-desc">{desc}</p>
             </div>
             </a>
         );
@@ -179,6 +206,7 @@ export function News({lang}) {
         <div className="news-section">
         <div className="scrollbox">
             <div className="news-container">
+                <Post id="Japi310"/>
                 <Post id="NewWebsiteLaunch"/>
                 <Post id="AsbrModdingComesToNintendoSwitch"/>
                 <Post id="UselessMaidLisaLisaCompetition"/>

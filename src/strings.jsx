@@ -14,6 +14,7 @@ const strings = {
         news: {
             see: "see",
             more: "more",
+            Japi310: "Kicking off 2025, version 3.1.0 of JoJoAPI has dropped with some huge updates that'll change how it's used forever...",
             NewWebsiteLaunch: "We're proud to announce the launch of our new website at jojomodding.com, our official portal!",
             AsbrModdingComesToNintendoSwitch: "We've seen a massive breakthrough for ASBR players on Nintendo Switch...",
             UselessMaidLisaLisaCompetition: "Previously seldom modded, we held a Lisa Lisa texture competition, funded by Useless Maid...",
@@ -24,6 +25,7 @@ const strings = {
     },
     "es": {
         url: "/es",
+        translation_needed: "[necesita traduccion]",
         navbar: {
             wiki: "wiki",
             roadmaps: "planos",
