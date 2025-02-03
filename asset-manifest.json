@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.33814572.css",
-    "main.js": "/static/js/main.6a98001b.js",
+    "main.js": "/static/js/main.764c2af3.js",
     "static/js/453.e3df7beb.chunk.js": "/static/js/453.e3df7beb.chunk.js",
     "static/media/yumindb.ttf": "/static/media/yumindb.605cf2d301f0dc1de7ce.ttf",
     "static/media/Gen Jyuu Gothic Monospace Heavy.ttf": "/static/media/Gen Jyuu Gothic Monospace Heavy.f76d225b3f596c21270e.ttf",
@@ -54,11 +54,11 @@
     "static/media/YouTube.png": "/static/media/YouTube.c8f3e8f286c46725b712.png",
     "index.html": "/index.html",
     "main.33814572.css.map": "/static/css/main.33814572.css.map",
-    "main.6a98001b.js.map": "/static/js/main.6a98001b.js.map",
+    "main.764c2af3.js.map": "/static/js/main.764c2af3.js.map",
     "453.e3df7beb.chunk.js.map": "/static/js/453.e3df7beb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.33814572.css",
-    "static/js/main.6a98001b.js"
+    "static/js/main.764c2af3.js"
   ]
 }
