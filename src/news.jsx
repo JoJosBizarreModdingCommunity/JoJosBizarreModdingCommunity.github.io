@@ -15,7 +15,7 @@ const news_data = {
         link: "https://jojomodding.miraheze.org/wiki/News:JAPI_v3.1.0",
         translated: {
             "es": false,
-            "pt-br": false,
+            "pt-br": true,
             "ja": false
         },
         date: {

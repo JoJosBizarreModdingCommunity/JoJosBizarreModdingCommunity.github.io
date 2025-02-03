@@ -62,6 +62,7 @@ const strings = {
         news: {
             see: "leia",
             more: "mais",
+            Japi310: "Começando 2025, a versão 3.1.0 de JoJoAPI lançou com grandes updates que vão mudar como será usado pra sempre...",
             NewWebsiteLaunch: "Estamos orgulhosos em anunciar o lançamento do nosso novo website na jojomodding.com, nosso portal oficial!",
             AsbrModdingComesToNintendoSwitch: "Nós tivemos um grande avanço para os jogadores de ASBR no Nintendo Switch...",
             UselessMaidLisaLisaCompetition: "Foi feita uma competição de texturas para Lisa Lisa, financiada por Useless Maid...",
