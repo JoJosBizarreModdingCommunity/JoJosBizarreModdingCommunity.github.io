@@ -3,7 +3,7 @@ import game_art from "./assets/game_art.jsx"
 
 function Game({link, name}) {
     return (
-        <a href={link} target="_blank">
+        <a href={link} target="_blank" rel="noreferrer">
         <div className="game">
             <img className="game-back" src={game_art["Back_" + name]}></img>
             <img className={name + "-prop"} src={game_art["Prop_" + name]}></img>

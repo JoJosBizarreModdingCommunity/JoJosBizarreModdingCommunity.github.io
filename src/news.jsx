@@ -188,7 +188,7 @@ export function News({lang}) {
             desc = "[translation needed]"; // strings[lang].translation_needed;
 
         return (
-            <a className="news-post" href={link} target="_blank">
+            <a className="news-post" href={link} target="_blank" rel="noreferrer">
             <div className="news-post">
                 {media}
                 <div className="news-back"></div>
@@ -214,7 +214,7 @@ export function News({lang}) {
                 <Post id="Sofdec2Discoveries"/>
 
                 <div className="see-more">
-                    <a className="see-more" href="https://jojomodding.miraheze.org/wiki/Template:Modding_Announcements" target="_blank">
+                    <a className="see-more" href="https://jojomodding.miraheze.org/wiki/Template:Modding_Announcements" target="_blank" rel="noreferrer">
                         <img src={more}/>
                         <p className="see-more-1">{string.news.see}</p>
                         <p className="see-more-2">{string.news.more}</p>

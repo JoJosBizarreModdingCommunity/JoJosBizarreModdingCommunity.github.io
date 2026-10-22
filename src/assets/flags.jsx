@@ -13,6 +13,7 @@ export function GetFlag(code) {
         case "sv": return flag_SE;
         case "pl": return flag_PL;
         case "ja": return flag_JP;
+		default: break;
     }
     return flag_GB;
 }
