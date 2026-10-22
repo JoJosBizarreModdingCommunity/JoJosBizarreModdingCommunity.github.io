@@ -79,7 +79,9 @@ function Home({lang}) {
 
           <div className="navbar">
             <div className="nav-buttons">
-              <a href="https://wiki.jojomodding.com" target="_blank">{string.navbar.wiki}</a>
+              <a href="https://github.com/JoJosBizarreModdingCommunity/JoJosBizarreModdingCommunity.github.io" target="_blank">{string.navbar.github}</a>
+              {nav_pipe}
+              <a href="https://jojomodding.wiki.gg" target="_blank">{string.navbar.wiki}</a>
               {nav_pipe}
               <HashLink to={`${string.url}#about-us`}>{string.navbar.about}</HashLink>
               {nav_pipe}
